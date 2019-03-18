@@ -40,6 +40,10 @@ ctf = tl.generate_chrome_trace_format()
 with open('mnist_timeline.json', 'w') as f:
     f.write(ctf)
 with open('mnist_graph.json', "w") as f:
-	for n in tf.get_default_graph().as_graph_def().node:
-		f.write(n.name + "\n")	
+    nodes = []
+    for n in tf.get_default_graph().as_graph_def().node:
+        nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")
+    f.write("{\"nodes\":[\n")
+    f.write(",".join(nodes))
+    f.write("]}")
 
