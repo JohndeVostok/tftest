@@ -1,7 +1,7 @@
 import json
 from ast import literal_eval
 
-test = "matmul"
+test = "mnist"
 
 if __name__ == "__main__":
     nodetime = {}
