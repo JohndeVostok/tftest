@@ -1,0 +1,160 @@
+{
+    "traceEvents": [
+        {
+            "args": {
+                "name": "Allocators"
+            },
+            "ph": "M",
+            "name": "process_name",
+            "pid": 0
+        },
+        {
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "ph": "M",
+            "name": "process_name",
+            "pid": 1
+        },
+        {
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "ph": "M",
+            "name": "process_name",
+            "pid": 2
+        },
+        {
+            "dur": 15,
+            "name": "NoOp",
+            "pid": 1,
+            "ts": 1552893781158171,
+            "tid": 0,
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "dur": 14,
+            "name": "Const",
+            "pid": 1,
+            "ts": 1552893781158194,
+            "tid": 0,
+            "args": {
+                "name": "random_normal_1/shape",
+                "op": "Const"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "dur": 4,
+            "name": "Const",
+            "pid": 1,
+            "ts": 1552893781158222,
+            "tid": 0,
+            "args": {
+                "name": "random_normal/shape",
+                "op": "Const"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "dur": 141894,
+            "name": "RandomStandardNormal",
+            "pid": 1,
+            "ts": 1552893781158259,
+            "tid": 0,
+            "args": {
+                "name": "random_normal_1/RandomStandardNormal",
+                "input0": "random_normal_1/shape",
+                "op": "RandomStandardNormal"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "dur": 175521,
+            "name": "RandomStandardNormal",
+            "pid": 1,
+            "ts": 1552893781158228,
+            "tid": 1,
+            "args": {
+                "name": "random_normal/RandomStandardNormal",
+                "input0": "random_normal/shape",
+                "op": "RandomStandardNormal"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "name": "random_normal/shape",
+            "pid": 1,
+            "ts": 1552893781158226,
+            "tid": 0,
+            "ph": "s",
+            "id": 0,
+            "cat": "DataFlow"
+        },
+        {
+            "name": "random_normal/shape",
+            "pid": 1,
+            "ts": 1552893781158228,
+            "tid": 1,
+            "ph": "t",
+            "id": 0,
+            "cat": "DataFlow"
+        },
+        {
+            "dur": 540302,
+            "name": "MatMul",
+            "pid": 1,
+            "ts": 1552893781333772,
+            "tid": 0,
+            "args": {
+                "input1": "random_normal_1/RandomStandardNormal",
+                "name": "MatMul",
+                "input0": "random_normal/RandomStandardNormal",
+                "op": "MatMul"
+            },
+            "ph": "X",
+            "cat": "Op"
+        },
+        {
+            "name": "random_normal/RandomStandardNormal",
+            "pid": 1,
+            "ts": 1552893781333749,
+            "tid": 1,
+            "ph": "s",
+            "id": 1,
+            "cat": "DataFlow"
+        },
+        {
+            "name": "random_normal/RandomStandardNormal",
+            "pid": 1,
+            "ts": 1552893781333772,
+            "tid": 0,
+            "ph": "t",
+            "id": 1,
+            "cat": "DataFlow"
+        },
+        {
+            "dur": 9,
+            "name": "_Retval",
+            "pid": 1,
+            "ts": 1552893781874100,
+            "tid": 0,
+            "args": {
+                "name": "_retval_MatMul_0_0",
+                "input0": "MatMul",
+                "op": "_Retval"
+            },
+            "ph": "X",
+            "cat": "Op"
+        }
+    ]
+}
