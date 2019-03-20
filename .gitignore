@@ -105,7 +105,8 @@ venv.bak/
 
 # gedit
 *~
-
+#vim
+*.swp
 # data
 MNIST_data
 logs

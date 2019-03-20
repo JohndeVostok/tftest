@@ -1,7 +1,7 @@
 import json
 from ast import literal_eval
 
-test = "mnist"
+test = "matmul"
 
 if __name__ == "__main__":
     nodetime = {}
@@ -38,12 +38,15 @@ if __name__ == "__main__":
         i = q[0]
         del(q[0])
         if i in nodetime:
+            print(i)
+            print(nodes[i]["t"])
             nodes[i]["t"] = nodes[i]["t"] + nodetime[i]
+            print(nodes[i]["t"])
         for j in nodes[i]["out"]:
             if nodes[i]["t"] > nodes[j]["t"]:
                 nodes[j]["t"] = nodes[i]["t"]
             nodes[j]["in"].remove(i)
             if nodes[j]["in"] == []:
                 q.append(j)
-    for i in nodes:
-        print(i, nodes[i]["t"])
+    #for i in nodes:
+    #    print(i, nodes[i]["t"])
