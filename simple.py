@@ -6,7 +6,7 @@ from tensorflow.python.client import timeline
 
 if __name__ == "__main__":
     a = tf.random_normal([5000, 5000])
-    b = tf.random_normal([5000, 5000])
+    b = tf.random_uniform([5000, 5000])
     c = tf.matmul(a, b)
     d = tf.matmul(b, c)
 
@@ -24,10 +24,10 @@ if __name__ == "__main__":
 
     tl = timeline.Timeline(run_metadata.step_stats)
     ctf = tl.generate_chrome_trace_format()
-    with open('matmul_timeline.json', 'w') as f:
+    with open('simple_timeline.json', 'w') as f:
         f.write(ctf)
 
-    with open('matmul_graph.json', "w") as f:
+    with open('simple_graph.json', "w") as f:
         nodes = []
         for n in tf.get_default_graph().as_graph_def().node:
             nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")

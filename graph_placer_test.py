@@ -7,10 +7,12 @@ from tensorflow.python.framework import meta_graph
 from tensorflow.python.framework import ops as tf_ops
 from tensorflow.python.grappler import cluster
 from tensorflow.python.grappler import graph_placer
+from tensorflow.python.grappler import cost_analyzer
 from tensorflow.python.ops import math_ops
 
+import tensorflow as tf
 
-def buildCluster(num_cpus=1, num_gpus=1):
+def buildCluster(num_cpus=1, num_gpus=2):
     devices = []
     if num_gpus > 0:
         device_properties = device_properties_pb2.DeviceProperties(
@@ -36,11 +38,11 @@ def buildCluster(num_cpus=1, num_gpus=1):
     assert num_cpus > 0
     device_properties = device_properties_pb2.DeviceProperties(
         type='CPU',
-        frequency=2000,
-        num_cores=4,
+        frequency=1900,
+        num_cores=2,
         l1_cache_size=32768,
         l2_cache_size=262144,
-        l3_cache_size=12582912)
+        l3_cache_size=3145728)
     for i in range(num_cpus):
         devices.append(
             device_properties_pb2.NamedDevice(
@@ -51,25 +53,31 @@ def buildCluster(num_cpus=1, num_gpus=1):
 
 if __name__ == "__main__":
     """Place a trivial graph."""
-    a = constant_op.constant(10, name='a')
-    b = constant_op.constant(20, name='b')
-    c = math_ops.add_n([a, b], name='c')
-    d = math_ops.add_n([b, c], name='d')
+    a = tf.random_normal([5000, 5000])
+    b = tf.random_normal([5000, 5000])
+    c = tf.matmul(a, b)
+    d = tf.matmul(b, c)
     train_op = tf_ops.get_collection_ref(tf_ops.GraphKeys.TRAIN_OP)
     train_op.append(d)
     mg = meta_graph.create_meta_graph_def(graph=tf_ops.get_default_graph())
     with open("placer_test_before.txt", "w") as f:
         f.write(str(mg))
     #
-    gcluster = buildCluster()
-    placed_mg = graph_placer.PlaceGraph(mg, allotted_time=15, cluster=gcluster)
-    with open("placer_test_after.txt", "w") as f:
-        f.write(str(placed_mg))
+    gcluster = buildCluster(num_cpus=1, num_gpus=0)
 
-    available_devices = [device.name for device in gcluster.ListDevices()]
-    print(available_devices)
-    for node in placed_mg.graph_def.node:
-        print(node.name, node.device)
+    rep = cost_analyzer.GenerateCostReport(mg, per_node_report=True, cluster=gcluster)
+    with open("report.txt", "w") as f:
+        f.write(str(rep, encoding="utf-8"))
+    print(rep)
+
+    # placed_mg = graph_placer.PlaceGraph(mg, verbose=True, allotted_time=15, cluster=gcluster)
+    # with open("placer_test_after.txt", "w") as f:
+    #     f.write(str(placed_mg))
+    #
+    # available_devices = [device.name for device in gcluster.ListDevices()]
+    # print(available_devices)
+    # for node in placed_mg.graph_def.node:
+    #     print(node.name, node.device)
     #
     # self.assertEqual(4, len(placed_mg.graph_def.node))
     # self.assertItemsEqual([node.name for node in placed_mg.graph_def.node],
