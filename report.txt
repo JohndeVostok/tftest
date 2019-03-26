@@ -1,0 +1,32 @@
+
+Total time measured in ns (serialized):                   131655258000
+Total time measured in ns (actual):                       131655263000
+Total time analytical in ns (upper bound):                131655258000
+Total time analytical in ns (lower bound):                131611508000
+Overall efficiency (analytical upper/actual):                        1
+Overall efficiency (analytical lower/actual):                 0.999668
+
+                                 Op,          Count,  Measured time (ns),    Time percent,     Acc percent,    Analytical upper,    Analytical lower,      Overall eff      Compute eff       Memory eff
+                             MatMul,              2,        131597696000,          1e+02%,          1e+02%,        131597696000,        131578946000,          1e+02%,          1e+02%,          0.014%,
+                                Add,              2,            25656000,          0.019%,          1e+02%,            25656000,            13156000,          1e+02%,             51%,             49%,
+                                Mul,              2,            25656000,          0.019%,          1e+02%,            25656000,            13156000,          1e+02%,             51%,             49%,
+               RandomStandardNormal,              2,             6250000,         0.0047%,          1e+02%,             6250000,             6250000,          1e+02%,              0%,          1e+02%,
+                              Const,              6,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+
+Below is the per-node report summary:
+                                 Op,  Measured time (ns),   Compute time (ns),    Memory time (ns),     Compute eff,      Memory eff,    Inputs
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+               RandomStandardNormal,             3125000,                   0,             3125000,           -inf%,          1e+02%,    [(2)]
+                                Mul,            12828000,             6578000,             6250000,             51%,             49%,    [(5000, 5000), ]
+                                Add,            12828000,             6578000,             6250000,             51%,             49%,    [(5000, 5000), ]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+               RandomStandardNormal,             3125000,                   0,             3125000,           -inf%,          1e+02%,    [(2)]
+                                Mul,            12828000,             6578000,             6250000,             51%,             49%,    [(5000, 5000), ]
+                                Add,            12828000,             6578000,             6250000,             51%,             49%,    [(5000, 5000), ]
+                             MatMul,         65798848000,         65789473000,             9375000,          1e+02%,          0.014%,    [(5000, 5000), (5000, 5000)]
+                             MatMul,         65798848000,         65789473000,             9375000,          1e+02%,          0.014%,    [(5000, 5000), (5000, 5000)]
+

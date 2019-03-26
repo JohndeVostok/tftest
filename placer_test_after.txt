@@ -1,0 +1,194 @@
+meta_info_def {
+  stripped_op_list {
+    op {
+      name: "AddN"
+      input_arg {
+        name: "inputs"
+        type_attr: "T"
+        number_attr: "N"
+      }
+      output_arg {
+        name: "sum"
+        type_attr: "T"
+      }
+      attr {
+        name: "N"
+        type: "int"
+        has_minimum: true
+        minimum: 1
+      }
+      attr {
+        name: "T"
+        type: "type"
+        allowed_values {
+          list {
+            type: DT_FLOAT
+            type: DT_DOUBLE
+            type: DT_INT32
+            type: DT_UINT8
+            type: DT_INT16
+            type: DT_INT8
+            type: DT_COMPLEX64
+            type: DT_INT64
+            type: DT_QINT8
+            type: DT_QUINT8
+            type: DT_QINT32
+            type: DT_BFLOAT16
+            type: DT_UINT16
+            type: DT_COMPLEX128
+            type: DT_HALF
+            type: DT_UINT32
+            type: DT_UINT64
+            type: DT_VARIANT
+          }
+        }
+      }
+      is_aggregate: true
+      is_commutative: true
+    }
+    op {
+      name: "Const"
+      output_arg {
+        name: "output"
+        type_attr: "dtype"
+      }
+      attr {
+        name: "value"
+        type: "tensor"
+      }
+      attr {
+        name: "dtype"
+        type: "type"
+      }
+    }
+  }
+  tensorflow_version: "1.8.0"
+  tensorflow_git_version: "b\'v1.8.0-0-g93bc2e2072\'"
+}
+graph_def {
+  node {
+    name: "a"
+    op: "Const"
+    attr {
+      key: "_output_shapes"
+      value {
+        list {
+          shape {
+          }
+        }
+      }
+    }
+    attr {
+      key: "dtype"
+      value {
+        type: DT_INT32
+      }
+    }
+    attr {
+      key: "value"
+      value {
+        tensor {
+          dtype: DT_INT32
+          tensor_shape {
+          }
+          int_val: 10
+        }
+      }
+    }
+  }
+  node {
+    name: "b"
+    op: "Const"
+    attr {
+      key: "_output_shapes"
+      value {
+        list {
+          shape {
+          }
+        }
+      }
+    }
+    attr {
+      key: "dtype"
+      value {
+        type: DT_INT32
+      }
+    }
+    attr {
+      key: "value"
+      value {
+        tensor {
+          dtype: DT_INT32
+          tensor_shape {
+          }
+          int_val: 20
+        }
+      }
+    }
+  }
+  node {
+    name: "c"
+    op: "AddN"
+    input: "a"
+    input: "b"
+    attr {
+      key: "N"
+      value {
+        i: 2
+      }
+    }
+    attr {
+      key: "T"
+      value {
+        type: DT_INT32
+      }
+    }
+    attr {
+      key: "_output_shapes"
+      value {
+        list {
+          shape {
+          }
+        }
+      }
+    }
+  }
+  node {
+    name: "d"
+    op: "AddN"
+    input: "b"
+    input: "c"
+    attr {
+      key: "N"
+      value {
+        i: 2
+      }
+    }
+    attr {
+      key: "T"
+      value {
+        type: DT_INT32
+      }
+    }
+    attr {
+      key: "_output_shapes"
+      value {
+        list {
+          shape {
+          }
+        }
+      }
+    }
+  }
+  versions {
+    producer: 26
+  }
+}
+collection_def {
+  key: "train_op"
+  value {
+    node_list {
+      value: "d:0"
+    }
+  }
+}

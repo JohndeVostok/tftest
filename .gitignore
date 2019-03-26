@@ -110,3 +110,5 @@ venv.bak/
 # data
 MNIST_data
 logs
+# idea
+.idea
