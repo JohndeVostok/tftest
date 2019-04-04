@@ -9,6 +9,7 @@
 #include "tensorflow/core/common_runtime/device_set.h"
 #include "tensorflow/core/common_runtime/device_factory.h"
 #include "tensorflow/core/common_runtime/placer.h"
+#include "tensorflow/core/common_runtime/build_graph_options.h"
 
 //#include "tensorflow/core/framework/device_attributes.pb_text.h"
 //#include "tensorflow/core/framework/device_attributes.pb.h"
@@ -58,20 +59,16 @@ int main() {
     //for (const auto node : graph->op_nodes()) {
     //    cout << "node.name:" << node->name() << " node.ptr:" << node << endl;
     //    cout << "node.device_idx:" << node->assigned_device_name_index() << endl;
-        //" '" << node->requested_device() << "'" << node->assigned_device_name_index() << " " << endl;
-        //cout << node->assigned_device_name() << endl;
-        //cout << node->name() << ":requeseted:'" << node->requested_device() << "' assigned: '" << node->assigned_device_name() << "'";
-    }
-    cout << "Placer run correctly. but var offset invalid."
+    //}
+    cout << "Placer run correctly. but var offset invalid." << endl;
     cout << "TEST::Placer End" << endl;
     //SaveStatefulNodes(new_graph.get());
 
-    // Test Optimizor
-    //GraphOptimizationPassOptions optimization_options;
-    //optimization_options.session_options = session_options;
-    //optimization_options.graph = &;
-    //optimization_options.flib_def = flib.get();
-    //optimization_options.device_set = device_set_;
+    unique_ptr<Graph> optimized_graph;
+    unique_ptr<FunctionLibraryDefinition> optimized_flib;
+    BuildGraphOptions options;
+    cout << options.DebugString() << endl;
+    //status = OptimizeGraph(options, &optimized_graph, &optimized_flib);
 
     return 0;
 }
