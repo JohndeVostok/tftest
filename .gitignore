@@ -159,6 +159,7 @@ _deps
 MNIST_data
 logs
 tftest
+model
 
 # idea
 .idea

@@ -1,5 +1,6 @@
 import os
 import tensorflow as tf
+import numpy as np
 from tensorflow.python.client import timeline
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -18,7 +19,9 @@ LEARNING_RATE_BASE = 0.8
 LEARNING_RATE_DECAY = 0.99
 REGULARIZATION_TATE = 0.0001
 MOVING_AVERAGE_DECAY = 0.99
-TRAIN_STEP = 300000
+TRAIN_STEP = 10
+MODEL_PATH = 'model'
+MODEL_NAME = 'model'
 
 
 def interence(input_tensor, train, regularizer):
@@ -103,7 +106,7 @@ if __name__ == "__main__":
         for i in range(TRAIN_STEP):
             xs, ys = mnist.train.next_batch(BATCH_SIZE)
             reshape_xs = np.reshape(xs, (BATCH_SIZE, IMAGE_SIZE, IMAGE_SIZE, NUM_CHANNEL))
-            if i % 1000 == 0:
+            if i % 10 == 0:
                 _, loss_value, step, learn_rate = sess.run([train_op, loss, global_step, learning_rate],
                                                        feed_dict={x: reshape_xs, y_: ys},
                                                        options=run_options, run_metadata=run_metadata)
