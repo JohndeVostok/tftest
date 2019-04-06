@@ -1,4 +1,5 @@
 import os
+import time
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.client import timeline
@@ -101,9 +102,13 @@ if __name__ == "__main__":
         tf.global_variables_initializer().run()
         xs, ys = mnist.train.next_batch(BATCH_SIZE)
         reshape_xs = np.reshape(xs, (BATCH_SIZE, IMAGE_SIZE, IMAGE_SIZE, NUM_CHANNEL))
+        time_st = time.time_ns()
         _, loss_value, step, learn_rate = sess.run([train_op, loss, global_step, learning_rate],
                                                    feed_dict={x: reshape_xs, y_: ys},
                                                    options=run_options, run_metadata=run_metadata)
+        time_ed = time.time_ns()
+    with open("lenet5_runtime.json", "w") as f:
+        f.write(str(time_ed - time_st))
     tl = timeline.Timeline(run_metadata.step_stats)
     ctf = tl.generate_chrome_trace_format()
     with open('lenet5_timeline.json', 'w') as f:

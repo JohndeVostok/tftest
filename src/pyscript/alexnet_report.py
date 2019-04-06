@@ -126,7 +126,8 @@ if __name__ == "__main__":
     objective = tf.nn.l2_loss(output)
     grad = tf.gradients(objective, parameters)
     train_op = tf_ops.get_collection_ref(tf_ops.GraphKeys.TRAIN_OP)
-    train_op.append(output)
+    for i in grad:
+        train_op.append(i)
     mg = meta_graph.create_meta_graph_def(graph=tf_ops.get_default_graph())
     cluster = build_cluster()
     report = cost_analyzer.GenerateCostReport(mg, per_node_report=True, cluster=cluster)
