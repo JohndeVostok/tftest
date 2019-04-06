@@ -3,6 +3,8 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.python.client import timeline
 from tensorflow.examples.tutorials.mnist import input_data
+from tensorflow.python.framework import meta_graph
+from tensorflow.python.grappler import cost_analyzer
 
 INPUT_NODE = 784
 OUTPUT_NODE = 10
@@ -118,8 +120,22 @@ if __name__ == "__main__":
                                                            feed_dict={x: reshape_xs, y_: ys})\
 
     writer.close()
+    mg = meta_graph.create_meta_graph_def(graph=tf.get_default_graph())
+    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
+    with open('lenet5_report.json', "w") as f:
+        f.write(str(report, encoding="utf-8"))
+
 
     tl = timeline.Timeline(run_metadata.step_stats)
     ctf = tl.generate_chrome_trace_format()
     with open('lenet5_timeline.json', 'w') as f:
         f.write(ctf)
+    print(tf.get_default_graph().as_graph_def())
+    with open('lenet5_graph.json', "w") as f:
+        nodes = []
+        for n in tf.get_default_graph().as_graph_def().node:
+            nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")
+        f.write("{\"nodes\":[\n")
+        f.write(",".join(nodes))
+        f.write("]}")
+
