@@ -5,10 +5,6 @@ from tensorflow.python.client import timeline
 from tensorflow.examples.tutorials.mnist import input_data
 from tensorflow.python.framework import meta_graph
 from tensorflow.python.grappler import cost_analyzer
-<<<<<<< HEAD
-=======
-
->>>>>>> 1c269fb277a08134dcafb98df129b419f3c8d612
 
 INPUT_NODE = 784
 OUTPUT_NODE = 10
@@ -138,11 +134,6 @@ if __name__ == "__main__":
     ctf = tl.generate_chrome_trace_format()
     with open('lenet5_timeline.json', 'w') as f:
         f.write(ctf)
-<<<<<<< HEAD
-    print(tf.get_default_graph().as_graph_def())
-=======
-    print(tf.get_default_graph().as_graph_def().node)
->>>>>>> 1c269fb277a08134dcafb98df129b419f3c8d612
     with open('lenet5_graph.json', "w") as f:
         nodes = []
         for n in tf.get_default_graph().as_graph_def().node:
@@ -150,7 +141,3 @@ if __name__ == "__main__":
         f.write("{\"nodes\":[\n")
         f.write(",".join(nodes))
         f.write("]}")
-<<<<<<< HEAD
-
-=======
->>>>>>> 1c269fb277a08134dcafb98df129b419f3c8d612
