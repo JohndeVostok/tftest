@@ -1,1 +1,97 @@
-Error: failed to preprocess metagraph: check your log file for errors
+
+Total time measured in ns (serialized):                     1937374000
+Total time measured in ns (actual):                         1937388000
+Total time analytical in ns (upper bound):                  1937360000
+Total time analytical in ns (lower bound):                  1924029000
+Overall efficiency (analytical upper/actual):                 0.999986
+Overall efficiency (analytical lower/actual):                 0.993105
+
+                                 Op,          Count,  Measured time (ns),    Time percent,     Acc percent,    Analytical upper,    Analytical lower,      Overall eff      Compute eff       Memory eff
+                             Conv2D,              5,          1758680000,             91%,             91%,          1758677000,          1755052000,          1e+02%,          1e+02%,           0.21%,
+                             MatMul,              4,           163790000,            8.5%,             99%,           163787000,           156350000,          1e+02%,             95%,            4.5%,
+                               Relu,              8,             4675000,           0.24%,             99%,             4671000,             4007000,          1e+02%,             14%,             86%,
+                            BiasAdd,              5,             4590000,           0.24%,          1e+02%,             4588000,             3935000,          1e+02%,             14%,             86%,
+                            MaxPool,              3,             2830000,           0.15%,          1e+02%,             2828000,             1887000,          1e+02%,             33%,             67%,
+                                LRN,              2,             2724000,           0.14%,          1e+02%,             2724000,             2724000,          1e+02%,              0%,          1e+02%,
+                                Add,              4,               85000,         0.0044%,          1e+02%,               85000,               74000,          1e+02%,             13%,             87%,
+                              Const,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                           Identity,             19,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                            Reshape,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                            Softmax,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                         VariableV2,             19,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+
+Below is the per-node report summary:
+                                 Op,  Measured time (ns),   Compute time (ns),    Memory time (ns),     Compute eff,      Memory eff,    Inputs
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 224, 224, 3)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(11, 11, 3, 64)]
+                             Conv2D,           195689000,           194281000,             1407000,             99%,           0.72%,    [(32, 224, 224, 3), (11, 11, 3, 64)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(64)]
+                            BiasAdd,             1873000,              267000,             1605000,             14%,             86%,    [(32, 56, 56, 64), (64)]
+                               Relu,             1873000,              267000,             1605000,             14%,             86%,    [(32, 56, 56, 64)]
+                                LRN,             1605000,                   0,             1605000,           -inf%,          1e+02%,    [(32, 56, 56, 64)]
+                            MaxPool,             1487000,              497000,              989000,             33%,             67%,    [(32, 56, 56, 64)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 64, 192)]
+                             Conv2D,           597981000,           597196000,              784000,          1e+02%,           0.13%,    [(32, 27, 27, 64), (5, 5, 64, 192)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(192)]
+                            BiasAdd,             1306000,              186000,             1119000,             14%,             86%,    [(32, 27, 27, 192), (192)]
+                               Relu,             1306000,              186000,             1119000,             14%,             86%,    [(32, 27, 27, 192)]
+                                LRN,             1119000,                   0,             1119000,           -inf%,          1e+02%,    [(32, 27, 27, 192)]
+                            MaxPool,             1035000,              346000,              689000,             33%,             67%,    [(32, 27, 27, 192)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 192, 384)]
+                             Conv2D,           299513000,           299040000,              472000,          1e+02%,           0.16%,    [(32, 13, 13, 192), (3, 3, 192, 384)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(384)]
+                            BiasAdd,              605000,               86000,              519000,             14%,             86%,    [(32, 13, 13, 384), (384)]
+                               Relu,              605000,               86000,              519000,             14%,             86%,    [(32, 13, 13, 384)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 384, 256)]
+                             Conv2D,           399264000,           398721000,              543000,          1e+02%,           0.14%,    [(32, 13, 13, 384), (3, 3, 384, 256)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(256)]
+                            BiasAdd,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256), (256)]
+                               Relu,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 256, 256)]
+                             Conv2D,           266233000,           265814000,              419000,          1e+02%,           0.16%,    [(32, 13, 13, 256), (3, 3, 256, 256)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(256)]
+                            BiasAdd,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256), (256)]
+                               Relu,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256)]
+                            MaxPool,              308000,               98000,              209000,             32%,             68%,    [(32, 13, 13, 256)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 6, 6, 256), (2)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(9216, 4096)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096)]
+                             MatMul,           105435000,           100663000,             4771000,             95%,            4.5%,    [(32, 9216), (9216, 4096)]
+                                Add,               38000,                5000,               33000,             13%,             87%,    [(32, 4096), (4096)]
+                               Relu,               38000,                5000,               32000,             13%,             84%,    [(32, 4096)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096, 4096)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096)]
+                             MatMul,            46869000,            44739000,             2129000,             95%,            4.5%,    [(32, 4096), (4096, 4096)]
+                                Add,               38000,                5000,               33000,             13%,             87%,    [(32, 4096), (4096)]
+                               Relu,               38000,                5000,               32000,             13%,             84%,    [(32, 4096)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096, 1000)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(1000)]
+                             MatMul,            11455000,            10922000,              532000,             95%,            4.6%,    [(32, 4096), (4096, 1000)]
+                                Add,                9000,                1000,                8000,             11%,             89%,    [(32, 1000), (1000)]
+                               Relu,                9000,                1000,                8000,             11%,             89%,    [(32, 1000)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(1000, 10)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(10)]
+                             MatMul,               31000,               26000,                5000,             84%,             16%,    [(32, 1000), (1000, 10)]
+                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (10)]
+                            Softmax,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10)]
+
