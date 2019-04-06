@@ -3,7 +3,7 @@ import time
 import tensorflow as tf
 from tensorflow.python.client import timeline
 from tensorflow.python.framework import meta_graph
-from tensorflow.python.grappler import cost_analyzer
+#from tensorflow.python.grappler import cost_analyzer
 
 batch_size = 32
 num_bathes = 100
@@ -109,14 +109,14 @@ if __name__ == "__main__":
     objective = tf.nn.l2_loss(output)
     grad = tf.gradients(objective, parameters)
 
-    mg = meta_graph.create_meta_graph_def(graph=sess.graph())
-    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
-    with open('lenet5_report.json', "w") as f:
-        f.write(str(report, encoding="utf-8"))
+    mg = meta_graph.create_meta_graph_def(graph=sess.graph)
+#    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
+#    with open('lenet5_report.json', "w") as f:
+#        f.write(str(report, encoding="utf-8"))
 
     with open('alexnet_graph.json', "w") as f:
         nodes = []
-        for n in sess.graph_def().node:
+        for n in sess.graph_def.node:
             nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")
         f.write("{\"nodes\":[\n")
         f.write(",".join(nodes))
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     sess.run(grad, options=run_options, run_metadata=run_metadata)
     time_ed = time.time()
 
-    with open('alexnet_runtime.json') as f:
+    with open('alexnet_runtime.json', 'w') as f:
         f.write(str(time_ed - time_st))
 
     tl = timeline.Timeline(run_metadata.step_stats)
