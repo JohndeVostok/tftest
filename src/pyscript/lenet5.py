@@ -81,7 +81,7 @@ if __name__ == "__main__":
                        name='x-input')
     y_ = tf.placeholder(tf.float32, shape=[None, OUTPUT_NODE], name='y-input')
     regularizer = tf.contrib.layers.l2_regularizer(REGULARIZATION_TATE)
-    y = interence(x, True, regularizer)
+    y = inference(x, True, regularizer)
     global_step = tf.Variable(0, trainable=False)
 
     variable_average = tf.train.ExponentialMovingAverage(MOVING_AVERAGE_DECAY, global_step)
@@ -119,12 +119,6 @@ if __name__ == "__main__":
                                                            feed_dict={x: reshape_xs, y_: ys})\
 
     writer.close()
-    mg = meta_graph.create_meta_graph_def(graph=tf.get_default_graph())
-    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
-    with open('lenet5_report.json', "w") as f:
-        f.write(str(report, encoding="utf-8"))
-
-
     mg = meta_graph.create_meta_graph_def(graph=tf.get_default_graph())
     report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
     with open('lenet5_report.json', "w") as f:

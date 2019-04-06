@@ -3,6 +3,10 @@ import time
 import tensorflow as tf
 from tensorflow.python.client import timeline
 from tensorflow.python.framework import meta_graph
+from tensorflow.core.protobuf import device_properties_pb2
+from tensorflow.python.grappler import cluster
+from tensorflow.python.grappler import cost_analyzer
+from tensorflow.python.framework import ops as tf_ops
 
 batch_size = 32
 num_bathes = 100
@@ -96,6 +100,22 @@ def inference(images):
     return output_softmax, parameters
 
 
+def build_cluster():
+    devices = []
+    device_properties = device_properties_pb2.DeviceProperties(
+        type='CPU',
+        frequency=2000,
+        num_cores=12,
+        l1_cache_size=32768,
+        l2_cache_size=262144,
+        l3_cache_size=30720*1024)
+    for i in range(2):
+        devices.append(
+            device_properties_pb2.NamedDevice(
+                properties=device_properties, name='/CPU:' + str(i)))
+    return cluster.Cluster(devices=devices)
+
+
 if __name__ == "__main__":
     os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
@@ -103,32 +123,12 @@ if __name__ == "__main__":
     images = tf.Variable(tf.random_normal([batch_size, image_size, image_size, 3]))
     output, parameters = inference(images)
     init = tf.global_variables_initializer()
-    sess = tf.Session()
-    sess.run(init)
     objective = tf.nn.l2_loss(output)
     grad = tf.gradients(objective, parameters)
-
-    mg = meta_graph.create_meta_graph_def(graph=sess.graph)
-
-    with open('alexnet_graph.json', "w") as f:
-        nodes = []
-        for n in sess.graph_def.node:
-            nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")
-        f.write("{\"nodes\":[\n")
-        f.write(",".join(nodes))
-        f.write("]}")
-
-    run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
-    run_metadata = tf.RunMetadata()
-
-    time_st = time.time()
-    sess.run(grad, options=run_options, run_metadata=run_metadata)
-    time_ed = time.time()
-
-    with open('alexnet_runtime.json', 'w') as f:
-        f.write(str(time_ed - time_st))
-
-    tl = timeline.Timeline(run_metadata.step_stats)
-    ctf = tl.generate_chrome_trace_format()
-    with open('alexnet_timeline.json', 'w') as f:
-        f.write(ctf)
+    train_op = tf_ops.get_collection_ref(tf_ops.GraphKeys.TRAIN_OP)
+    train_op.append(output)
+    mg = meta_graph.create_meta_graph_def(graph=tf_ops.get_default_graph())
+    cluster = build_cluster()
+    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True, cluster=cluster)
+    with open('alexnet_report.json', "w") as f:
+        f.write(str(report, encoding="utf-8"))

@@ -1,0 +1,5332 @@
+{
+    "traceEvents": [
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 0,
+            "args": {
+                "name": "Allocators"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 1,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            }
+        },
+        {
+            "name": "process_name",
+            "ph": "M",
+            "pid": 2,
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840237,
+            "dur": 33,
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840301,
+            "dur": 35,
+            "args": {
+                "name": "layer1-conv/w/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840314,
+            "dur": 27,
+            "args": {
+                "name": "layer3-conv/w/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840314,
+            "dur": 23,
+            "args": {
+                "name": "layer1-conv/b/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840346,
+            "dur": 10,
+            "args": {
+                "name": "layer3-conv/w/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer3-conv/w/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840341,
+            "id": 0
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840346,
+            "id": 0
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840348,
+            "dur": 8,
+            "args": {
+                "name": "layer1-conv/b/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer1-conv/b/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840337,
+            "id": 1
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840348,
+            "id": 1
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840347,
+            "dur": 18,
+            "args": {
+                "name": "layer1-conv/w/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer1-conv/w/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840336,
+            "id": 2
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840347,
+            "id": 2
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840365,
+            "dur": 9,
+            "args": {
+                "name": "layer5-fc1/w/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840363,
+            "dur": 9,
+            "args": {
+                "name": "layer3-conv/b/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840377,
+            "dur": 6,
+            "args": {
+                "name": "layer5-fc1/w/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer5-fc1/w/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840378,
+            "dur": 9,
+            "args": {
+                "name": "layer3-conv/b/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer3-conv/b/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840375,
+            "dur": 19,
+            "args": {
+                "name": "layer5-fc1/b/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840393,
+            "dur": 8,
+            "args": {
+                "name": "layer6-fc2/b/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840391,
+            "dur": 11,
+            "args": {
+                "name": "layer6-fc2/w/ExponentialMovingAverage",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840405,
+            "dur": 8,
+            "args": {
+                "name": "layer6-fc2/b/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer6-fc2/b/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840406,
+            "dur": 6,
+            "args": {
+                "name": "layer6-fc2/w/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer6-fc2/w/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840407,
+            "dur": 16,
+            "args": {
+                "name": "layer5-fc1/b/ExponentialMovingAverage/read",
+                "op": "Identity",
+                "input0": "layer5-fc1/b/ExponentialMovingAverage"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840420,
+            "dur": 8,
+            "args": {
+                "name": "Variable",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840421,
+            "dur": 8,
+            "args": {
+                "name": "layer6-fc2/b",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840431,
+            "dur": 9,
+            "args": {
+                "name": "layer1-conv/w",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840432,
+            "dur": 9,
+            "args": {
+                "name": "layer6-fc2/b/read",
+                "op": "Identity",
+                "input0": "layer6-fc2/b"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840445,
+            "dur": 4,
+            "args": {
+                "name": "layer1-conv/w/read",
+                "op": "Identity",
+                "input0": "layer1-conv/w"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Retval",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840431,
+            "dur": 1373,
+            "args": {
+                "name": "_retval_Variable_0_1",
+                "op": "_Retval",
+                "input0": "Variable"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "Variable",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840428,
+            "id": 3
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "Variable",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840431,
+            "id": 3
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572841819,
+            "dur": 17,
+            "args": {
+                "name": "Variable/read",
+                "op": "Identity",
+                "input0": "Variable"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Arg",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572840299,
+            "dur": 1863,
+            "args": {
+                "name": "_arg_y-input_0_1",
+                "op": "_Arg"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Arg",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842168,
+            "dur": 8,
+            "args": {
+                "name": "_arg_x-input_0_0",
+                "op": "_Arg"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842180,
+            "dur": 9,
+            "args": {
+                "name": "ExponentialDecay/learning_rate",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842192,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialDecay/Cast_2/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842200,
+            "dur": 5,
+            "args": {
+                "name": "Const",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842208,
+            "dur": 5,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Cast",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572841840,
+            "dur": 389,
+            "args": {
+                "name": "ExponentialDecay/Cast",
+                "op": "Cast",
+                "input0": "Variable/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "Variable/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572841836,
+            "id": 4
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "Variable/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572841840,
+            "id": 4
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842215,
+            "dur": 17,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842236,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_2/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842245,
+            "dur": 6,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842254,
+            "dur": 5,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842239,
+            "dur": 22,
+            "args": {
+                "name": "layer1-conv/b",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842262,
+            "dur": 6,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_5/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842263,
+            "dur": 9,
+            "args": {
+                "name": "layer1-conv/b/read",
+                "op": "Identity",
+                "input0": "layer1-conv/b"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842272,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572840450,
+            "dur": 1833,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub_1",
+                "op": "Sub",
+                "input0": "layer6-fc2/b/ExponentialMovingAverage/read",
+                "input1": "layer6-fc2/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840413,
+            "id": 5
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572840450,
+            "id": 5
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840441,
+            "id": 6
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/read",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572840450,
+            "id": 6
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842281,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572840451,
+            "dur": 1841,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg/sub_1",
+                "op": "Sub",
+                "input0": "layer1-conv/w/ExponentialMovingAverage/read",
+                "input1": "layer1-conv/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840365,
+            "id": 7
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572840451,
+            "id": 7
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840449,
+            "id": 8
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/read",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572840451,
+            "id": 8
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842280,
+            "dur": 14,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub_1",
+                "op": "Sub",
+                "input0": "layer1-conv/b/ExponentialMovingAverage/read",
+                "input1": "layer1-conv/b/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842290,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/add/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842293,
+            "dur": 14,
+            "args": {
+                "name": "layer3-conv/w",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842304,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/add_1/x",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842303,
+            "dur": 15,
+            "args": {
+                "name": "layer5-fc1/w",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842311,
+            "dur": 10,
+            "args": {
+                "name": "layer3-conv/w/read",
+                "op": "Identity",
+                "input0": "layer3-conv/w"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842315,
+            "dur": 8,
+            "args": {
+                "name": "gradients/layer1-conv/Conv2D_grad/Const",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842301,
+            "dur": 21,
+            "args": {
+                "name": "layer3-conv/b",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842322,
+            "dur": 8,
+            "args": {
+                "name": "layer5-fc1/w/read",
+                "op": "Identity",
+                "input0": "layer5-fc1/w"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842326,
+            "dur": 7,
+            "args": {
+                "name": "gradients/layer3-conv/Conv2D_grad/Const",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842329,
+            "dur": 7,
+            "args": {
+                "name": "layer3-conv/b/read",
+                "op": "Identity",
+                "input0": "layer3-conv/b"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842322,
+            "id": 9
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842329,
+            "id": 9
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842336,
+            "dur": 9,
+            "args": {
+                "name": "layer5-fc1/l2_regularizer/scale",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842350,
+            "dur": 8,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/Shape_1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842339,
+            "dur": 22,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub_1",
+                "op": "Sub",
+                "input0": "layer3-conv/b/ExponentialMovingAverage/read",
+                "input1": "layer3-conv/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842336,
+            "id": 10
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842339,
+            "id": 10
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842362,
+            "dur": 11,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Shape_1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842377,
+            "dur": 14,
+            "args": {
+                "name": "GradientDescent/learning_rate",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842397,
+            "dur": 13,
+            "args": {
+                "name": "ConstantFolding/gradients/layer5-fc1/dropout/div_grad/RealDiv_recip",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842417,
+            "dur": 12,
+            "args": {
+                "name": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/ExpandDims/dim",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842437,
+            "dur": 12,
+            "args": {
+                "name": "ArgMax/dimension",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842457,
+            "dur": 9,
+            "args": {
+                "name": "layer5-fc1/dropout/keep_prob",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842471,
+            "dur": 10,
+            "args": {
+                "name": "Reshape/shape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842484,
+            "dur": 6,
+            "args": {
+                "name": "ConstantFolding/ExponentialDecay/truediv_recip",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842495,
+            "dur": 8,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Shape_1",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842325,
+            "dur": 165,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_2/sub_1",
+                "op": "Sub",
+                "input0": "layer3-conv/w/ExponentialMovingAverage/read",
+                "input1": "layer3-conv/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840356,
+            "id": 11
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842325,
+            "id": 11
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842321,
+            "id": 12
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842325,
+            "id": 12
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842506,
+            "dur": 7,
+            "args": {
+                "name": "gradients/Mean_grad/Reshape",
+                "op": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842512,
+            "dur": 19,
+            "args": {
+                "name": "layer5-fc1/b",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842516,
+            "dur": 15,
+            "args": {
+                "name": "ExponentialDecay/truediv",
+                "op": "Mul",
+                "input0": "ExponentialDecay/Cast",
+                "input1": "ConstantFolding/ExponentialDecay/truediv_recip"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842229,
+            "id": 13
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842516,
+            "id": 13
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842534,
+            "dur": 9,
+            "args": {
+                "name": "layer5-fc1/b/read",
+                "op": "Identity",
+                "input0": "layer5-fc1/b"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842531,
+            "id": 14
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842534,
+            "id": 14
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842550,
+            "dur": 22,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_5/sub_1",
+                "op": "Sub",
+                "input0": "layer5-fc1/b/ExponentialMovingAverage/read",
+                "input1": "layer5-fc1/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840423,
+            "id": 15
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842550,
+            "id": 15
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "VariableV2",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842583,
+            "dur": 22,
+            "args": {
+                "name": "layer6-fc2/w",
+                "op": "VariableV2"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Identity",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842609,
+            "dur": 6,
+            "args": {
+                "name": "layer6-fc2/w/read",
+                "op": "Identity",
+                "input0": "layer6-fc2/w"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "L2Loss",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842621,
+            "dur": 9,
+            "args": {
+                "name": "layer6-fc2/l2_regularizer/L2Loss",
+                "op": "L2Loss",
+                "input0": "layer6-fc2/w/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842632,
+            "dur": 5,
+            "args": {
+                "name": "gradients/layer6-fc2/l2_regularizer_grad/tuple/control_dependency_1",
+                "op": "Const",
+                "input0": "^layer6-fc2/l2_regularizer/L2Loss"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842639,
+            "dur": 12,
+            "args": {
+                "name": "gradients/layer6-fc2/l2_regularizer/L2Loss_grad/mul",
+                "op": "Mul",
+                "input0": "layer6-fc2/w/read",
+                "input1": "gradients/layer6-fc2/l2_regularizer_grad/tuple/control_dependency_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842656,
+            "dur": 9,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub_1",
+                "op": "Sub",
+                "input0": "layer6-fc2/w/ExponentialMovingAverage/read",
+                "input1": "layer6-fc2/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840412,
+            "id": 16
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842656,
+            "id": 16
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Pow",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842536,
+            "dur": 2515,
+            "args": {
+                "name": "ExponentialDecay/Pow",
+                "op": "Pow",
+                "input0": "ExponentialDecay/Cast_2/x",
+                "input1": "ExponentialDecay/truediv"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast_2/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842199,
+            "id": 17
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast_2/x",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842536,
+            "id": 17
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/truediv",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842531,
+            "id": 18
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/truediv",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842536,
+            "id": 18
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845082,
+            "dur": 29,
+            "args": {
+                "name": "ExponentialDecay",
+                "op": "Mul",
+                "input0": "ExponentialDecay/learning_rate",
+                "input1": "ExponentialDecay/Pow"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Pow",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572845051,
+            "id": 19
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Pow",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845082,
+            "id": 19
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Retval",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845118,
+            "dur": 9,
+            "args": {
+                "name": "_retval_ExponentialDecay_0_0",
+                "op": "_Retval",
+                "input0": "ExponentialDecay"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "L2Loss",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572842335,
+            "dur": 3255,
+            "args": {
+                "name": "layer5-fc1/l2_regularizer/L2Loss",
+                "op": "L2Loss",
+                "input0": "layer5-fc1/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842330,
+            "id": 20
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572842335,
+            "id": 20
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845604,
+            "dur": 18,
+            "args": {
+                "name": "gradients/layer5-fc1/l2_regularizer_grad/tuple/control_dependency_1",
+                "op": "Const",
+                "input0": "^layer5-fc1/l2_regularizer/L2Loss"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842366,
+            "dur": 5851,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub_1",
+                "op": "Sub",
+                "input0": "layer5-fc1/w/ExponentialMovingAverage/read",
+                "input1": "layer5-fc1/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840383,
+            "id": 21
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/ExponentialMovingAverage/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842366,
+            "id": 21
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842330,
+            "id": 22
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842366,
+            "id": 22
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845635,
+            "dur": 3121,
+            "args": {
+                "name": "gradients/layer5-fc1/l2_regularizer/L2Loss_grad/mul",
+                "op": "Mul",
+                "input0": "layer5-fc1/w/read",
+                "input1": "gradients/layer5-fc1/l2_regularizer_grad/tuple/control_dependency_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842330,
+            "id": 23
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572845635,
+            "id": 23
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ArgMax",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572845135,
+            "dur": 4314,
+            "args": {
+                "name": "ArgMax",
+                "op": "ArgMax",
+                "input0": "_arg_y-input_0_1",
+                "input1": "ArgMax/dimension"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "_arg_y-input_0_1",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842162,
+            "id": 24
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "_arg_y-input_0_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572845135,
+            "id": 24
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ArgMax/dimension",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842449,
+            "id": 25
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ArgMax/dimension",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572845135,
+            "id": 25
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572849459,
+            "dur": 4479,
+            "args": {
+                "name": "ExponentialMovingAverage/add_1",
+                "op": "Add",
+                "input0": "ExponentialMovingAverage/add_1/x",
+                "input1": "ExponentialDecay/Cast"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842229,
+            "id": 26
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572849459,
+            "id": 26
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572848248,
+            "dur": 5692,
+            "args": {
+                "name": "ExponentialMovingAverage/add",
+                "op": "Add",
+                "input0": "ExponentialMovingAverage/add/x",
+                "input1": "ExponentialDecay/Cast"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842297,
+            "id": 27
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add/x",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572848248,
+            "id": 27
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842229,
+            "id": 28
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialDecay/Cast",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572848248,
+            "id": 28
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AddN",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572848773,
+            "dur": 5770,
+            "args": {
+                "name": "ArithmeticOptimizer/HoistCommonFactor_Add_AddN",
+                "op": "AddN",
+                "input0": "layer5-fc1/l2_regularizer/L2Loss",
+                "input1": "layer6-fc2/l2_regularizer/L2Loss"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/l2_regularizer/L2Loss",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572845590,
+            "id": 29
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/l2_regularizer/L2Loss",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572848773,
+            "id": 29
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/l2_regularizer/L2Loss",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842630,
+            "id": 30
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/l2_regularizer/L2Loss",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572848773,
+            "id": 30
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572854552,
+            "dur": 20,
+            "args": {
+                "name": "ArithmeticOptimizer/HoistCommonFactor_Mul_AddN",
+                "op": "Mul",
+                "input0": "layer5-fc1/l2_regularizer/scale",
+                "input1": "ArithmeticOptimizer/HoistCommonFactor_Add_AddN"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ArithmeticOptimizer/HoistCommonFactor_Add_AddN",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572854543,
+            "id": 31
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ArithmeticOptimizer/HoistCommonFactor_Add_AddN",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572854552,
+            "id": 31
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572854141,
+            "dur": 2897,
+            "args": {
+                "name": "ExponentialMovingAverage/truediv",
+                "op": "RealDiv",
+                "input0": "ExponentialMovingAverage/add",
+                "input1": "ExponentialMovingAverage/add_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572853940,
+            "id": 32
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572854141,
+            "id": 32
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572853938,
+            "id": 33
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/add_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572854141,
+            "id": 33
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Minimum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572857048,
+            "dur": 2328,
+            "args": {
+                "name": "ExponentialMovingAverage/Minimum",
+                "op": "Minimum",
+                "input0": "ExponentialDecay/Cast_2/x",
+                "input1": "ExponentialMovingAverage/truediv"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/truediv",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572857038,
+            "id": 34
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/truediv",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572857048,
+            "id": 34
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859406,
+            "dur": 22,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_7/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859412,
+            "dur": 19,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842213,
+            "id": 35
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub/x",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859412,
+            "id": 35
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859376,
+            "id": 36
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859412,
+            "id": 36
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859436,
+            "dur": 14,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub_1",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572842292,
+            "id": 37
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859436,
+            "id": 37
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859431,
+            "id": 38
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859436,
+            "id": 38
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859435,
+            "dur": 15,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_7/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_7/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_7/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub_1",
+            "pid": 1,
+            "tid": 4,
+            "ts": 1554533572842283,
+            "id": 39
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859435,
+            "id": 39
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859428,
+            "id": 40
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_7/sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859435,
+            "id": 40
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859425,
+            "dur": 26,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_1/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842232,
+            "id": 41
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub/x",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859425,
+            "id": 41
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859376,
+            "id": 42
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859425,
+            "id": 42
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859459,
+            "dur": 12,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_1/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_1/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_1/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842294,
+            "id": 43
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859459,
+            "id": 43
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859451,
+            "id": 44
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_1/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859459,
+            "id": 44
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859474,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_1",
+                "op": "AssignSub",
+                "input0": "layer1-conv/b/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_1/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840337,
+            "id": 45
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859474,
+            "id": 45
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859458,
+            "dur": 22,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_7",
+                "op": "AssignSub",
+                "input0": "layer6-fc2/b/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_7/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840401,
+            "id": 46
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859458,
+            "id": 46
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859454,
+            "dur": 27,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg",
+                "op": "AssignSub",
+                "input0": "layer1-conv/w/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840336,
+            "id": 47
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859454,
+            "id": 47
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859450,
+            "id": 48
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg/mul",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859454,
+            "id": 48
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859486,
+            "dur": 9,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_2/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_2/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859487,
+            "dur": 10,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_3/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842251,
+            "id": 49
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub/x",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859487,
+            "id": 49
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859376,
+            "id": 50
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859487,
+            "id": 50
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859487,
+            "dur": 14,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_6/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub/x",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842279,
+            "id": 51
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub/x",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859487,
+            "id": 51
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859376,
+            "id": 52
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/Minimum",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859487,
+            "id": 52
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859502,
+            "dur": 9,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_3/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_3/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_3/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842361,
+            "id": 53
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859502,
+            "id": 53
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859497,
+            "id": 54
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_3/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859502,
+            "id": 54
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859509,
+            "dur": 13,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_6/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_6/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_6/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842665,
+            "id": 55
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859509,
+            "id": 55
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859501,
+            "id": 56
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_6/sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859509,
+            "id": 56
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859515,
+            "dur": 8,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_3",
+                "op": "AssignSub",
+                "input0": "layer3-conv/b/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_3/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840372,
+            "id": 57
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859515,
+            "id": 57
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572859500,
+            "dur": 31,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_2/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_2/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_2/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_2/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859495,
+            "id": 58
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_2/sub",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572859500,
+            "id": 58
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859529,
+            "dur": 9,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_4/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859527,
+            "dur": 14,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_6",
+                "op": "AssignSub",
+                "input0": "layer6-fc2/w/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_6/mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859545,
+            "dur": 7,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_5/sub",
+                "op": "Sub",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_5/sub/x",
+                "input1": "ExponentialMovingAverage/Minimum"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859557,
+            "dur": 13,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_5/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_5/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_5/sub"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859534,
+            "dur": 42,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_2",
+                "op": "AssignSub",
+                "input0": "layer3-conv/w/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_2/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840341,
+            "id": 59
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859534,
+            "id": 59
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_2/mul",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572859531,
+            "id": 60
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_2/mul",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572859534,
+            "id": 60
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859575,
+            "dur": 10,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_5",
+                "op": "AssignSub",
+                "input0": "layer5-fc1/b/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_5/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572840394,
+            "id": 61
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/ExponentialMovingAverage",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859575,
+            "id": 61
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859543,
+            "dur": 733,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_4/mul",
+                "op": "Mul",
+                "input0": "ExponentialMovingAverage/AssignMovingAvg_4/sub_1",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_4/sub"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub_1",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572848217,
+            "id": 62
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859543,
+            "id": 62
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572859538,
+            "id": 63
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/sub",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572859543,
+            "id": 63
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignSub",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572860298,
+            "dur": 2962,
+            "args": {
+                "name": "ExponentialMovingAverage/AssignMovingAvg_4",
+                "op": "AssignSub",
+                "input0": "layer5-fc1/w/ExponentialMovingAverage",
+                "input1": "ExponentialMovingAverage/AssignMovingAvg_4/mul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572860276,
+            "id": 64
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ExponentialMovingAverage/AssignMovingAvg_4/mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572860298,
+            "id": 64
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572842669,
+            "dur": 59047,
+            "args": {
+                "name": "layer1-conv/Conv2D",
+                "op": "Conv2D",
+                "input0": "_arg_x-input_0_0",
+                "input1": "layer1-conv/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "_arg_x-input_0_0",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842176,
+            "id": 65
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "_arg_x-input_0_0",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572842669,
+            "id": 65
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572840449,
+            "id": 66
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/w/read",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572842669,
+            "id": 66
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572901737,
+            "dur": 5527,
+            "args": {
+                "name": "layer1-conv/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "layer1-conv/Conv2D",
+                "input1": "layer1-conv/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/Conv2D",
+            "pid": 1,
+            "tid": 5,
+            "ts": 1554533572901716,
+            "id": 67
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/Conv2D",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572901737,
+            "id": 67
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842272,
+            "id": 68
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572901737,
+            "id": 68
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572907275,
+            "dur": 2552,
+            "args": {
+                "name": "layer1-conv/Relu",
+                "op": "Relu",
+                "input0": "layer1-conv/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572909837,
+            "dur": 6781,
+            "args": {
+                "name": "layer2-pool/MaxPool",
+                "op": "MaxPool",
+                "input0": "layer1-conv/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ShapeN",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916650,
+            "dur": 35,
+            "args": {
+                "name": "gradients/layer3-conv/Conv2D_grad/ShapeN",
+                "op": "ShapeN",
+                "input0": "layer2-pool/MaxPool",
+                "input1": "layer3-conv/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842321,
+            "id": 69
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916650,
+            "id": 69
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2D",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572916658,
+            "dur": 63244,
+            "args": {
+                "name": "layer3-conv/Conv2D",
+                "op": "Conv2D",
+                "input0": "layer2-pool/MaxPool",
+                "input1": "layer3-conv/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916618,
+            "id": 70
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572916658,
+            "id": 70
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842321,
+            "id": 71
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572916658,
+            "id": 71
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAdd",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572979919,
+            "dur": 530,
+            "args": {
+                "name": "layer3-conv/BiasAdd",
+                "op": "BiasAdd",
+                "input0": "layer3-conv/Conv2D",
+                "input1": "layer3-conv/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/Conv2D",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572979902,
+            "id": 72
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/Conv2D",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572979919,
+            "id": 72
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842336,
+            "id": 73
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572979919,
+            "id": 73
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572980463,
+            "dur": 531,
+            "args": {
+                "name": "layer3-conv/Relu",
+                "op": "Relu",
+                "input0": "layer3-conv/BiasAdd"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981002,
+            "dur": 856,
+            "args": {
+                "name": "layer4-pool/MaxPool",
+                "op": "MaxPool",
+                "input0": "layer3-conv/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981879,
+            "dur": 15,
+            "args": {
+                "name": "gradients/Reshape_grad/Shape",
+                "op": "Shape",
+                "input0": "layer4-pool/MaxPool"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981900,
+            "dur": 22,
+            "args": {
+                "name": "Reshape",
+                "op": "Reshape",
+                "input0": "layer4-pool/MaxPool",
+                "input1": "Reshape/shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981925,
+            "dur": 9181,
+            "args": {
+                "name": "layer5-fc1/MatMul",
+                "op": "MatMul",
+                "input0": "Reshape",
+                "input1": "layer5-fc1/w/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842330,
+            "id": 74
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981925,
+            "id": 74
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572991141,
+            "dur": 18,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Shape",
+                "op": "Shape",
+                "input0": "layer5-fc1/MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BroadcastGradientArgs",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572991163,
+            "dur": 1176,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/BroadcastGradientArgs",
+                "op": "BroadcastGradientArgs",
+                "input0": "gradients/layer5-fc1/add_grad/Shape",
+                "input1": "gradients/layer5-fc1/add_grad/Shape_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572991149,
+            "dur": 1384,
+            "args": {
+                "name": "layer5-fc1/add",
+                "op": "Add",
+                "input0": "layer5-fc1/MatMul",
+                "input1": "layer5-fc1/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/MatMul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572991106,
+            "id": 75
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/MatMul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572991149,
+            "id": 75
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842543,
+            "id": 76
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572991149,
+            "id": 76
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992543,
+            "dur": 22,
+            "args": {
+                "name": "layer5-fc1/Relu",
+                "op": "Relu",
+                "input0": "layer5-fc1/add"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/add",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572992533,
+            "id": 77
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/add",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992543,
+            "id": 77
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992573,
+            "dur": 8,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/Shape",
+                "op": "Shape",
+                "input0": "layer5-fc1/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BroadcastGradientArgs",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992587,
+            "dur": 22,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/BroadcastGradientArgs",
+                "op": "BroadcastGradientArgs",
+                "input0": "gradients/layer5-fc1/dropout/div_grad/Shape",
+                "input1": "gradients/layer5-fc1/dropout/div_grad/Shape_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572992580,
+            "dur": 36,
+            "args": {
+                "name": "layer5-fc1/dropout/div",
+                "op": "Mul",
+                "input0": "layer5-fc1/Relu",
+                "input1": "ConstantFolding/gradients/layer5-fc1/dropout/div_grad/RealDiv_recip"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992565,
+            "id": 78
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/Relu",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572992580,
+            "id": 78
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ConstantFolding/gradients/layer5-fc1/dropout/div_grad/RealDiv_recip",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842410,
+            "id": 79
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ConstantFolding/gradients/layer5-fc1/dropout/div_grad/RealDiv_recip",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572992580,
+            "id": 79
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RandomUniform",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572992597,
+            "dur": 673,
+            "args": {
+                "name": "layer5-fc1/dropout/random_uniform/RandomUniform",
+                "op": "RandomUniform",
+                "input0": "gradients/layer5-fc1/dropout/div_grad/Shape"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/dropout/div_grad/Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992581,
+            "id": 80
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/dropout/div_grad/Shape",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572992597,
+            "id": 80
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Snapshot",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993279,
+            "dur": 6,
+            "args": {
+                "name": "layer5-fc1/dropout/random_uniform/mul",
+                "op": "Snapshot",
+                "input0": "layer5-fc1/dropout/random_uniform/RandomUniform"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/random_uniform/RandomUniform",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572993270,
+            "id": 81
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/random_uniform/RandomUniform",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993279,
+            "id": 81
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Snapshot",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993288,
+            "dur": 4,
+            "args": {
+                "name": "layer5-fc1/dropout/random_uniform",
+                "op": "Snapshot",
+                "input0": "layer5-fc1/dropout/random_uniform/mul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993295,
+            "dur": 21,
+            "args": {
+                "name": "layer5-fc1/dropout/add",
+                "op": "Add",
+                "input0": "layer5-fc1/dropout/keep_prob",
+                "input1": "layer5-fc1/dropout/random_uniform"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Floor",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993320,
+            "dur": 323,
+            "args": {
+                "name": "layer5-fc1/dropout/Floor",
+                "op": "Floor",
+                "input0": "layer5-fc1/dropout/add"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993647,
+            "dur": 738,
+            "args": {
+                "name": "layer5-fc1/dropout/mul",
+                "op": "Mul",
+                "input0": "layer5-fc1/dropout/div",
+                "input1": "layer5-fc1/dropout/Floor"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/div",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572992616,
+            "id": 82
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/div",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993647,
+            "id": 82
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994390,
+            "dur": 119,
+            "args": {
+                "name": "layer6-fc2/MatMul",
+                "op": "MatMul",
+                "input0": "layer5-fc1/dropout/mul",
+                "input1": "layer6-fc2/w/read"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994521,
+            "dur": 9,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Shape",
+                "op": "Shape",
+                "input0": "layer6-fc2/MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BroadcastGradientArgs",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994536,
+            "dur": 9,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/BroadcastGradientArgs",
+                "op": "BroadcastGradientArgs",
+                "input0": "gradients/layer6-fc2/add_grad/Shape",
+                "input1": "gradients/layer6-fc2/add_grad/Shape_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994548,
+            "dur": 46,
+            "args": {
+                "name": "layer6-fc2/add",
+                "op": "Add",
+                "input0": "layer6-fc2/MatMul",
+                "input1": "layer6-fc2/b/read"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840441,
+            "id": 83
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994548,
+            "id": 83
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "SparseSoftmaxCrossEntropyWithLogits",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994599,
+            "dur": 775,
+            "args": {
+                "name": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits",
+                "op": "SparseSoftmaxCrossEntropyWithLogits",
+                "input0": "layer6-fc2/add",
+                "input1": "ArgMax"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "ArgMax",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572849449,
+            "id": 84
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "ArgMax",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994599,
+            "id": 84
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995386,
+            "dur": 14,
+            "args": {
+                "name": "gradients/Mean_grad/Shape",
+                "op": "Shape",
+                "input0": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Prod",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995416,
+            "dur": 15,
+            "args": {
+                "name": "gradients/Mean_grad/Prod",
+                "op": "Prod",
+                "input0": "gradients/Mean_grad/Shape",
+                "input1": "Const"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Snapshot",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995440,
+            "dur": 15,
+            "args": {
+                "name": "gradients/Mean_grad/floordiv",
+                "op": "Snapshot",
+                "input0": "gradients/Mean_grad/Prod"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Cast",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995459,
+            "dur": 9,
+            "args": {
+                "name": "gradients/Mean_grad/Cast",
+                "op": "Cast",
+                "input0": "gradients/Mean_grad/floordiv"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mean",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572995397,
+            "dur": 938,
+            "args": {
+                "name": "Mean",
+                "op": "Mean",
+                "input0": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits",
+                "input1": "Const"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995374,
+            "id": 85
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572995397,
+            "id": 85
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842205,
+            "id": 86
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "Const",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572995397,
+            "id": 86
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Add",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572996342,
+            "dur": 9,
+            "args": {
+                "name": "add",
+                "op": "Add",
+                "input0": "Mean",
+                "input1": "ArithmeticOptimizer/HoistCommonFactor_Mul_AddN"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "Mean",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572996335,
+            "id": 87
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "Mean",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572996342,
+            "id": 87
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "_Retval",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572996354,
+            "dur": 2,
+            "args": {
+                "name": "_retval_add_0_2",
+                "op": "_Retval",
+                "input0": "add"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Tile",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572995407,
+            "dur": 3752,
+            "args": {
+                "name": "gradients/Mean_grad/Tile",
+                "op": "Tile",
+                "input0": "gradients/Mean_grad/Reshape",
+                "input1": "gradients/Mean_grad/Shape"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842513,
+            "id": 88
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Reshape",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572995407,
+            "id": 88
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Shape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572995400,
+            "id": 89
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Shape",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572995407,
+            "id": 89
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "RealDiv",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999166,
+            "dur": 14,
+            "args": {
+                "name": "gradients/Mean_grad/truediv",
+                "op": "RealDiv",
+                "input0": "gradients/Mean_grad/Tile",
+                "input1": "gradients/Mean_grad/Cast"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Tile",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572999159,
+            "id": 90
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/Mean_grad/Tile",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999166,
+            "id": 90
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ExpandDims",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999183,
+            "dur": 5,
+            "args": {
+                "name": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/ExpandDims",
+                "op": "ExpandDims",
+                "input0": "gradients/Mean_grad/truediv",
+                "input1": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/ExpandDims/dim"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999192,
+            "dur": 63,
+            "args": {
+                "name": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/mul",
+                "op": "Mul",
+                "input0": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/ExpandDims",
+                "input1": "SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits:1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999295,
+            "dur": 570,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Sum",
+                "op": "Sum",
+                "input0": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/mul",
+                "input1": "gradients/layer6-fc2/add_grad/BroadcastGradientArgs"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999876,
+            "dur": 11,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/layer6-fc2/add_grad/Sum",
+                "input1": "gradients/layer6-fc2/add_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572999269,
+            "dur": 1974,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Sum_1",
+                "op": "Sum",
+                "input0": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/mul",
+                "input1": "gradients/layer6-fc2/add_grad/BroadcastGradientArgs:1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999255,
+            "id": 91
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits_grad/mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572999269,
+            "id": 91
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/BroadcastGradientArgs:1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572994545,
+            "id": 92
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/BroadcastGradientArgs:1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572999269,
+            "id": 92
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573001250,
+            "dur": 9,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/Reshape_1",
+                "op": "Reshape",
+                "input0": "gradients/layer6-fc2/add_grad/Sum_1",
+                "input1": "gradients/layer6-fc2/add_grad/Shape_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Sum_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573001243,
+            "id": 93
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Sum_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573001250,
+            "id": 93
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573001262,
+            "dur": 3,
+            "args": {
+                "name": "gradients/layer6-fc2/add_grad/tuple/group_deps",
+                "op": "NoOp",
+                "input0": "^gradients/layer6-fc2/add_grad/Reshape",
+                "input1": "^gradients/layer6-fc2/add_grad/Reshape_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573001280,
+            "dur": 276,
+            "args": {
+                "name": "gradients/layer6-fc2/MatMul_grad/MatMul_1",
+                "op": "MatMul",
+                "input0": "layer5-fc1/dropout/mul",
+                "input1": "gradients/layer6-fc2/add_grad/Reshape",
+                "input2": "^gradients/layer6-fc2/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573001306,
+            "dur": 989,
+            "args": {
+                "name": "gradients/layer6-fc2/MatMul_grad/MatMul",
+                "op": "MatMul",
+                "input0": "gradients/layer6-fc2/add_grad/Reshape",
+                "input1": "layer6-fc2/w/read",
+                "input2": "^gradients/layer6-fc2/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572999887,
+            "id": 94
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Reshape",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573001306,
+            "id": 94
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842615,
+            "id": 95
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573001306,
+            "id": 95
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AddN",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002352,
+            "dur": 29,
+            "args": {
+                "name": "gradients/AddN",
+                "op": "AddN",
+                "input0": "gradients/layer6-fc2/l2_regularizer/L2Loss_grad/mul",
+                "input1": "gradients/layer6-fc2/MatMul_grad/MatMul_1",
+                "input2": "^gradients/layer6-fc2/MatMul_grad/MatMul"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002323,
+            "dur": 121,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/mul_grad/Mul",
+                "op": "Mul",
+                "input0": "gradients/layer6-fc2/MatMul_grad/MatMul",
+                "input1": "layer5-fc1/dropout/Floor",
+                "input2": "^gradients/layer6-fc2/MatMul_grad/MatMul_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/Floor",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572993643,
+            "id": 96
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/dropout/Floor",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002323,
+            "id": 96
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002455,
+            "dur": 42,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/RealDiv",
+                "op": "Mul",
+                "input0": "gradients/layer5-fc1/dropout/mul_grad/Mul",
+                "input1": "ConstantFolding/gradients/layer5-fc1/dropout/div_grad/RealDiv_recip"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/dropout/mul_grad/Mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002444,
+            "id": 97
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/dropout/mul_grad/Mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002455,
+            "id": 97
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002503,
+            "dur": 22,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/Sum",
+                "op": "Sum",
+                "input0": "gradients/layer5-fc1/dropout/div_grad/RealDiv",
+                "input1": "gradients/layer5-fc1/dropout/div_grad/BroadcastGradientArgs"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002529,
+            "dur": 13,
+            "args": {
+                "name": "gradients/layer5-fc1/dropout/div_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/layer5-fc1/dropout/div_grad/Sum",
+                "input1": "gradients/layer5-fc1/dropout/div_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002549,
+            "dur": 311,
+            "args": {
+                "name": "gradients/layer5-fc1/Relu_grad/ReluGrad",
+                "op": "ReluGrad",
+                "input0": "gradients/layer5-fc1/dropout/div_grad/Reshape",
+                "input1": "layer5-fc1/Relu"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002888,
+            "dur": 19,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Sum",
+                "op": "Sum",
+                "input0": "gradients/layer5-fc1/Relu_grad/ReluGrad",
+                "input1": "gradients/layer5-fc1/add_grad/BroadcastGradientArgs"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002916,
+            "dur": 10,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/layer5-fc1/add_grad/Sum",
+                "input1": "gradients/layer5-fc1/add_grad/Shape"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Sum",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002877,
+            "dur": 125,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Sum_1",
+                "op": "Sum",
+                "input0": "gradients/layer5-fc1/Relu_grad/ReluGrad",
+                "input1": "gradients/layer5-fc1/add_grad/BroadcastGradientArgs:1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002860,
+            "id": 98
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002877,
+            "id": 98
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/BroadcastGradientArgs:1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572992339,
+            "id": 99
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/BroadcastGradientArgs:1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573002877,
+            "id": 99
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003007,
+            "dur": 7,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/Reshape_1",
+                "op": "Reshape",
+                "input0": "gradients/layer5-fc1/add_grad/Sum_1",
+                "input1": "gradients/layer5-fc1/add_grad/Shape_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/Sum_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573003002,
+            "id": 100
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/Sum_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003007,
+            "id": 100
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003017,
+            "dur": 4,
+            "args": {
+                "name": "gradients/layer5-fc1/add_grad/tuple/group_deps",
+                "op": "NoOp",
+                "input0": "^gradients/layer5-fc1/add_grad/Reshape",
+                "input1": "^gradients/layer5-fc1/add_grad/Reshape_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003027,
+            "dur": 131,
+            "args": {
+                "name": "GradientDescent/update_layer5-fc1/b/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer5-fc1/b",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer5-fc1/add_grad/Reshape_1",
+                "input3": "^gradients/layer5-fc1/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842531,
+            "id": 101
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/b",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003027,
+            "id": 101
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573002389,
+            "dur": 776,
+            "args": {
+                "name": "GradientDescent/update_layer6-fc2/w/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer6-fc2/w",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/AddN"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842605,
+            "id": 102
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/w",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573002389,
+            "id": 102
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "GradientDescent/learning_rate",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842391,
+            "id": 103
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "GradientDescent/learning_rate",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573002389,
+            "id": 103
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/AddN",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002381,
+            "id": 104
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/AddN",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573002389,
+            "id": 104
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533573001292,
+            "dur": 1873,
+            "args": {
+                "name": "GradientDescent/update_layer6-fc2/b/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer6-fc2/b",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer6-fc2/add_grad/Reshape_1",
+                "input3": "^gradients/layer6-fc2/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572840429,
+            "id": 105
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer6-fc2/b",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533573001292,
+            "id": 105
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "GradientDescent/learning_rate",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842391,
+            "id": 106
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "GradientDescent/learning_rate",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533573001292,
+            "id": 106
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Reshape_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573001259,
+            "id": 107
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer6-fc2/add_grad/Reshape_1",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533573001292,
+            "id": 107
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573003026,
+            "dur": 21334,
+            "args": {
+                "name": "gradients/layer5-fc1/MatMul_grad/MatMul_1",
+                "op": "MatMul",
+                "input0": "Reshape",
+                "input1": "gradients/layer5-fc1/add_grad/Reshape",
+                "input2": "^gradients/layer5-fc1/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981922,
+            "id": 108
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573003026,
+            "id": 108
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573002926,
+            "id": 109
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/add_grad/Reshape",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573003026,
+            "id": 109
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MatMul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003168,
+            "dur": 29448,
+            "args": {
+                "name": "gradients/layer5-fc1/MatMul_grad/MatMul",
+                "op": "MatMul",
+                "input0": "gradients/layer5-fc1/add_grad/Reshape",
+                "input1": "layer5-fc1/w/read",
+                "input2": "^gradients/layer5-fc1/add_grad/tuple/group_deps"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842330,
+            "id": 110
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w/read",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573003168,
+            "id": 110
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573032643,
+            "dur": 22,
+            "args": {
+                "name": "gradients/Reshape_grad/Reshape",
+                "op": "Reshape",
+                "input0": "gradients/layer5-fc1/MatMul_grad/MatMul",
+                "input1": "gradients/Reshape_grad/Shape",
+                "input2": "^gradients/layer5-fc1/MatMul_grad/MatMul_1"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AddN",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573032651,
+            "dur": 3349,
+            "args": {
+                "name": "gradients/AddN_1",
+                "op": "AddN",
+                "input0": "gradients/layer5-fc1/l2_regularizer/L2Loss_grad/mul",
+                "input1": "gradients/layer5-fc1/MatMul_grad/MatMul_1",
+                "input2": "^gradients/layer5-fc1/MatMul_grad/MatMul"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/l2_regularizer/L2Loss_grad/mul",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572848756,
+            "id": 111
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer5-fc1/l2_regularizer/L2Loss_grad/mul",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573032651,
+            "id": 111
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573036016,
+            "dur": 7378,
+            "args": {
+                "name": "GradientDescent/update_layer5-fc1/w/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer5-fc1/w",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/AddN_1"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842318,
+            "id": 112
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer5-fc1/w",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573036016,
+            "id": 112
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/AddN_1",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573036000,
+            "id": 113
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/AddN_1",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573036016,
+            "id": 113
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573032675,
+            "dur": 11092,
+            "args": {
+                "name": "gradients/layer4-pool/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad",
+                "input0": "layer3-conv/Relu",
+                "input1": "layer4-pool/MaxPool",
+                "input2": "gradients/Reshape_grad/Reshape"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572980994,
+            "id": 114
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/Relu",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573032675,
+            "id": 114
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer4-pool/MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572981858,
+            "id": 115
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer4-pool/MaxPool",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573032675,
+            "id": 115
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/Reshape_grad/Reshape",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573032665,
+            "id": 116
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/Reshape_grad/Reshape",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573032675,
+            "id": 116
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573043783,
+            "dur": 2344,
+            "args": {
+                "name": "gradients/layer3-conv/Relu_grad/ReluGrad",
+                "op": "ReluGrad",
+                "input0": "gradients/layer4-pool/MaxPool_grad/MaxPoolGrad",
+                "input1": "layer3-conv/Relu"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer4-pool/MaxPool_grad/MaxPoolGrad",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573043767,
+            "id": 117
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer4-pool/MaxPool_grad/MaxPoolGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573043783,
+            "id": 117
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573046139,
+            "dur": 11201,
+            "args": {
+                "name": "gradients/layer3-conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/layer3-conv/Relu_grad/ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573057377,
+            "dur": 19,
+            "args": {
+                "name": "GradientDescent/update_layer3-conv/b/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer3-conv/b",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer3-conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b",
+            "pid": 1,
+            "tid": 3,
+            "ts": 1554533572842322,
+            "id": 118
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/b",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573057377,
+            "id": 118
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropInput",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573057366,
+            "dur": 81954,
+            "args": {
+                "name": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropInput",
+                "op": "Conv2DBackpropInput",
+                "input0": "gradients/layer3-conv/Conv2D_grad/ShapeN",
+                "input1": "layer3-conv/w/read",
+                "input2": "gradients/layer3-conv/Relu_grad/ReluGrad",
+                "input3": "^gradients/layer3-conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/ShapeN",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916685,
+            "id": 119
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/ShapeN",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573057366,
+            "id": 119
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842321,
+            "id": 120
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w/read",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573057366,
+            "id": 120
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573046127,
+            "id": 121
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573057366,
+            "id": 121
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573057376,
+            "dur": 124968,
+            "args": {
+                "name": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter",
+                "input0": "layer2-pool/MaxPool",
+                "input1": "gradients/layer3-conv/Conv2D_grad/Const",
+                "input2": "gradients/layer3-conv/Relu_grad/ReluGrad",
+                "input3": "^gradients/layer3-conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916618,
+            "id": 122
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573057376,
+            "id": 122
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842333,
+            "id": 123
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/Const",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573057376,
+            "id": 123
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573046127,
+            "id": 124
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573057376,
+            "id": 124
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573182383,
+            "dur": 136,
+            "args": {
+                "name": "GradientDescent/update_layer3-conv/w/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer3-conv/w",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropFilter",
+                "input3": "^gradients/layer3-conv/Conv2D_grad/Conv2DBackpropInput"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533572842307,
+            "id": 125
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer3-conv/w",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573182383,
+            "id": 125
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 2,
+            "ts": 1554533573182344,
+            "id": 126
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573182383,
+            "id": 126
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "MaxPoolGrad",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573182396,
+            "dur": 16674,
+            "args": {
+                "name": "gradients/layer2-pool/MaxPool_grad/MaxPoolGrad",
+                "op": "MaxPoolGrad",
+                "input0": "layer1-conv/Relu",
+                "input1": "layer2-pool/MaxPool",
+                "input2": "gradients/layer3-conv/Conv2D_grad/Conv2DBackpropInput",
+                "input3": "^gradients/layer3-conv/Conv2D_grad/Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/Relu",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572909827,
+            "id": 127
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/Relu",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573182396,
+            "id": 127
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572916618,
+            "id": 128
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer2-pool/MaxPool",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573182396,
+            "id": 128
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573199101,
+            "dur": 5821,
+            "args": {
+                "name": "gradients/layer1-conv/Relu_grad/ReluGrad",
+                "op": "ReluGrad",
+                "input0": "gradients/layer2-pool/MaxPool_grad/MaxPoolGrad",
+                "input1": "layer1-conv/Relu"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer2-pool/MaxPool_grad/MaxPoolGrad",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573199070,
+            "id": 129
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer2-pool/MaxPool_grad/MaxPoolGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573199101,
+            "id": 129
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "BiasAddGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573204940,
+            "dur": 14812,
+            "args": {
+                "name": "gradients/layer1-conv/BiasAdd_grad/BiasAddGrad",
+                "op": "BiasAddGrad",
+                "input0": "gradients/layer1-conv/Relu_grad/ReluGrad"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573219785,
+            "dur": 29,
+            "args": {
+                "name": "GradientDescent/update_layer1-conv/b/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer1-conv/b",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer1-conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533572842261,
+            "id": 130
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "layer1-conv/b",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573219785,
+            "id": 130
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573219775,
+            "dur": 22982,
+            "args": {
+                "name": "gradients/layer1-conv/Conv2D_grad/Conv2DBackpropFilter",
+                "op": "Conv2DBackpropFilter",
+                "input0": "_arg_x-input_0_0",
+                "input1": "gradients/layer1-conv/Conv2D_grad/Const",
+                "input2": "gradients/layer1-conv/Relu_grad/ReluGrad",
+                "input3": "^gradients/layer1-conv/BiasAdd_grad/BiasAddGrad"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "_arg_x-input_0_0",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842176,
+            "id": 131
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "_arg_x-input_0_0",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573219775,
+            "id": 131
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Conv2D_grad/Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533572842323,
+            "id": 132
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Conv2D_grad/Const",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573219775,
+            "id": 132
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573204922,
+            "id": 133
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Relu_grad/ReluGrad",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573219775,
+            "id": 133
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "ApplyGradientDescent",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573242785,
+            "dur": 20,
+            "args": {
+                "name": "GradientDescent/update_layer1-conv/w/ApplyGradientDescent",
+                "op": "ApplyGradientDescent",
+                "input0": "layer1-conv/w",
+                "input1": "GradientDescent/learning_rate",
+                "input2": "gradients/layer1-conv/Conv2D_grad/Conv2DBackpropFilter"
+            }
+        },
+        {
+            "ph": "s",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Conv2D_grad/Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 1,
+            "ts": 1554533573242757,
+            "id": 134
+        },
+        {
+            "ph": "t",
+            "cat": "DataFlow",
+            "name": "gradients/layer1-conv/Conv2D_grad/Conv2DBackpropFilter",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573242785,
+            "id": 134
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "Const",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573242809,
+            "dur": 7,
+            "args": {
+                "name": "GradientDescent/value",
+                "op": "Const",
+                "input0": "^GradientDescent/update_layer6-fc2/w/ApplyGradientDescent",
+                "input1": "^GradientDescent/update_layer1-conv/b/ApplyGradientDescent",
+                "input2": "^GradientDescent/update_layer1-conv/w/ApplyGradientDescent",
+                "input3": "^GradientDescent/update_layer3-conv/b/ApplyGradientDescent",
+                "input4": "^GradientDescent/update_layer3-conv/w/ApplyGradientDescent",
+                "input5": "^GradientDescent/update_layer5-fc1/b/ApplyGradientDescent",
+                "input6": "^GradientDescent/update_layer5-fc1/w/ApplyGradientDescent",
+                "input7": "^GradientDescent/update_layer6-fc2/b/ApplyGradientDescent"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "AssignAdd",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573242823,
+            "dur": 328,
+            "args": {
+                "name": "GradientDescent",
+                "op": "AssignAdd",
+                "input0": "Variable",
+                "input1": "GradientDescent/value"
+            }
+        },
+        {
+            "ph": "X",
+            "cat": "Op",
+            "name": "NoOp",
+            "pid": 1,
+            "tid": 0,
+            "ts": 1554533573243157,
+            "dur": 15,
+            "args": {
+                "name": "group_deps",
+                "op": "NoOp",
+                "input0": "^ExponentialMovingAverage/AssignMovingAvg_7",
+                "input1": "^GradientDescent",
+                "input2": "^ExponentialMovingAverage/AssignMovingAvg",
+                "input3": "^ExponentialMovingAverage/AssignMovingAvg_1",
+                "input4": "^ExponentialMovingAverage/AssignMovingAvg_2",
+                "input5": "^ExponentialMovingAverage/AssignMovingAvg_3",
+                "input6": "^ExponentialMovingAverage/AssignMovingAvg_4",
+                "input7": "^ExponentialMovingAverage/AssignMovingAvg_5",
+                "input8": "^ExponentialMovingAverage/AssignMovingAvg_6"
+            }
+        }
+    ]
+}
