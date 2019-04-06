@@ -1,10 +1,10 @@
 import os
 import json
-#os.environ["CUDA_VISIBLE_DEVICES"]="-1"   
 import tensorflow as tf
 from tensorflow.python.client import timeline
 
 if __name__ == "__main__":
+    os.environ["CUDA_VISIBLE_DEVICES"]="-1"
     a = tf.random_normal([5000, 5000])
     b = tf.random_normal([5000, 5000])
     c = tf.matmul(a, b)
