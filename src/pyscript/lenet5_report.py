@@ -1,10 +1,13 @@
 import os
+import time
 import tensorflow as tf
 import numpy as np
 from tensorflow.python.client import timeline
 from tensorflow.examples.tutorials.mnist import input_data
 from tensorflow.python.framework import meta_graph
+from tensorflow.python.grappler import cluster
 from tensorflow.python.grappler import cost_analyzer
+from tensorflow.core.protobuf import device_properties_pb2
 
 INPUT_NODE = 784
 OUTPUT_NODE = 10
@@ -22,8 +25,6 @@ LEARNING_RATE_DECAY = 0.99
 REGULARIZATION_TATE = 0.0001
 MOVING_AVERAGE_DECAY = 0.99
 TRAIN_STEP = 10
-MODEL_PATH = 'model'
-MODEL_NAME = 'model'
 
 
 def inference(input_tensor, train, regularizer):
@@ -73,6 +74,22 @@ def inference(input_tensor, train, regularizer):
     return logit
 
 
+def build_cluster():
+    devices = []
+    device_properties = device_properties_pb2.DeviceProperties(
+        type='CPU',
+        frequency=2000,
+        num_cores=12,
+        l1_cache_size=32768,
+        l2_cache_size=262144,
+        l3_cache_size=30720*1024)
+    for i in range(2):
+        devices.append(
+            device_properties_pb2.NamedDevice(
+                properties=device_properties, name='/CPU:' + str(i)))
+    return cluster.Cluster(devices=devices)
+
+
 if __name__ == "__main__":
     os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
     mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
@@ -101,37 +118,8 @@ if __name__ == "__main__":
     run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
     run_metadata = tf.RunMetadata()
 
-    with tf.Session() as sess:
-        writer = tf.summary.FileWriter("logs", sess.graph)
-        tf.global_variables_initializer().run()
-        for i in range(TRAIN_STEP):
-            xs, ys = mnist.train.next_batch(BATCH_SIZE)
-            reshape_xs = np.reshape(xs, (BATCH_SIZE, IMAGE_SIZE, IMAGE_SIZE, NUM_CHANNEL))
-            if i % 10 == 0:
-                _, loss_value, step, learn_rate = sess.run([train_op, loss, global_step, learning_rate],
-                                                       feed_dict={x: reshape_xs, y_: ys},
-                                                       options=run_options, run_metadata=run_metadata)
-                writer.add_run_metadata(run_metadata, 'step %03d' % i)
-                print('After %d step, loss on train is %g,and learn rate is %g' % (step, loss_value, learn_rate))
-                saver.save(sess, os.path.join(MODEL_PATH, MODEL_NAME), global_step=global_step)
-            else:
-                _, loss_value, step, learn_rate = sess.run([train_op, loss, global_step, learning_rate],
-                                                           feed_dict={x: reshape_xs, y_: ys})\
-
-    writer.close()
     mg = meta_graph.create_meta_graph_def(graph=tf.get_default_graph())
-    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True)
-    with open('lenet5_report.json', "w") as f:
+    cluster = build_cluster()
+    report = cost_analyzer.GenerateCostReport(mg, per_node_report=True, cluster=cluster)
+    with open('alexnet_report.json', "w") as f:
         f.write(str(report, encoding="utf-8"))
-
-    tl = timeline.Timeline(run_metadata.step_stats)
-    ctf = tl.generate_chrome_trace_format()
-    with open('lenet5_timeline.json', 'w') as f:
-        f.write(ctf)
-    with open('lenet5_graph.json', "w") as f:
-        nodes = []
-        for n in tf.get_default_graph().as_graph_def().node:
-            nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")
-        f.write("{\"nodes\":[\n")
-        f.write(",".join(nodes))
-        f.write("]}")

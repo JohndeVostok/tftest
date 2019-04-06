@@ -1,180 +1,242 @@
 
-Total time measured in ns (serialized):                     5442183000
-Total time measured in ns (actual):                         5442213000
-Total time analytical in ns (upper bound):                  5442156000
-Total time analytical in ns (lower bound):                  5412917000
-Overall efficiency (analytical upper/actual):                  0.99999
-Overall efficiency (analytical lower/actual):                 0.994617
+Total time measured in ns (serialized):                        5663000
+Total time measured in ns (actual):                            5683000
+Total time analytical in ns (upper bound):                     5652000
+Total time analytical in ns (lower bound):                     5150000
+Overall efficiency (analytical upper/actual):                 0.994545
+Overall efficiency (analytical lower/actual):                 0.906212
 
                                  Op,          Count,  Measured time (ns),    Time percent,     Acc percent,    Analytical upper,    Analytical lower,      Overall eff      Compute eff       Memory eff
-                             Conv2D,              5,          1758680000,             32%,             32%,          1758677000,          1755052000,          1e+02%,          1e+02%,           0.21%,
-               Conv2DBackpropFilter,              5,          1758680000,             32%,             65%,          1758677000,          1755052000,          1e+02%,          1e+02%,           0.21%,
-                Conv2DBackpropInput,              4,          1562991000,             29%,             93%,          1562989000,          1560771000,          1e+02%,          1e+02%,           0.14%,
-                             MatMul,              8,           327580000,              6%,             99%,           327574000,           312700000,          1e+02%,             95%,            4.5%,
-                           ReluGrad,              8,             6680000,           0.12%,             99%,             6677000,             6013000,          1e+02%,            9.9%,             90%,
-                            LRNGrad,              2,             5450000,            0.1%,          1e+02%,             5450000,             5450000,          1e+02%,              0%,          1e+02%,
-                        MaxPoolGrad,              3,             5389000,          0.099%,          1e+02%,             5387000,             3423000,          1e+02%,             36%,             64%,
-                               Relu,              8,             4675000,          0.086%,          1e+02%,             4671000,             4007000,          1e+02%,             14%,             86%,
-                            BiasAdd,              5,             4590000,          0.084%,          1e+02%,             4588000,             3935000,          1e+02%,             14%,             86%,
-                            MaxPool,              3,             2830000,          0.052%,          1e+02%,             2828000,             1887000,          1e+02%,             33%,             67%,
-                                LRN,              2,             2724000,           0.05%,          1e+02%,             2724000,             2724000,          1e+02%,              0%,          1e+02%,
-                        BiasAddGrad,              4,             1793000,          0.033%,          1e+02%,             1793000,             1793000,          1e+02%,              0%,          1e+02%,
-                                Add,              4,               85000,         0.0016%,          1e+02%,               85000,               74000,          1e+02%,             13%,             87%,
-                                Sum,              5,               36000,        0.00066%,          1e+02%,               36000,               36000,          1e+02%,              0%,          1e+02%,
+                             MatMul,              6,             1005000,             18%,             18%,             1002000,              603000,          1e+02%,             40%,             60%,
+                             Conv2D,              2,              900000,             16%,             34%,              899000,              888000,          1e+02%,             99%,            1.2%,
+               Conv2DBackpropFilter,              2,              900000,             16%,             50%,              899000,              888000,          1e+02%,             99%,            1.2%,
+                Conv2DBackpropInput,              2,              900000,             16%,             65%,              899000,              888000,          1e+02%,             99%,            1.2%,
+               ApplyGradientDescent,              8,              622000,             11%,             76%,              622000,              622000,          1e+02%,              0%,          1e+02%,
+                               AddN,              2,              603000,             11%,             87%,              603000,              603000,          1e+02%,              0%,          1e+02%,
+                                Mul,             12,              469000,            8.3%,             95%,              468000,              402000,          1e+02%,             14%,             86%,
+                             L2Loss,              2,              200000,            3.5%,             99%,              200000,              200000,          1e+02%,              0%,          1e+02%,
+                           ReluGrad,              3,               15000,           0.26%,             99%,               14000,               13000,             93%,            6.7%,             87%,
+                        MaxPoolGrad,              2,               12000,           0.21%,             99%,               11000,               10000,             92%,            8.3%,             83%,
+                            BiasAdd,              2,               10000,           0.18%,          1e+02%,               10000,                9000,          1e+02%,             10%,             90%,
+                               Relu,              3,               10000,           0.18%,          1e+02%,               10000,                9000,          1e+02%,             10%,             90%,
+                             ShapeN,              2,                7000,           0.12%,          1e+02%,                7000,                7000,          1e+02%,              0%,          1e+02%,
+                            MaxPool,              2,                6000,           0.11%,          1e+02%,                4000,                4000,             67%,              0%,             67%,
+                        BiasAddGrad,              2,                4000,          0.071%,          1e+02%,                4000,                4000,          1e+02%,              0%,          1e+02%,
+                                Add,              4,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                             ArgMax,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                          AssignAdd,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
               BroadcastGradientArgs,              4,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                              Const,             23,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                               Cast,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                              Const,             22,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                         ExpandDims,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
                                Fill,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                           Identity,             19,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                                Mul,              3,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                            Reshape,              7,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                            Softmax,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                              Floor,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                           FloorDiv,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                           Identity,             31,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                            Maximum,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                                Neg,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                               NoOp,             15,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                        Placeholder,              2,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                    PreventGradient,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                               Prod,              2,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                      RandomUniform,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                            RealDiv,              5,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                            Reshape,             11,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                              Shape,              9,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+SparseSoftmaxCrossEntropyWithLogits,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
                                 Sub,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
-                         VariableV2,             19,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                                Sum,              8,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                               Tile,              1,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
+                         VariableV2,              9,                   0,              0%,          1e+02%,                   0,                   0,      -nan(ind)%,      -nan(ind)%,      -nan(ind)%,
 
 Below is the per-node report summary:
                                  Op,  Measured time (ns),   Compute time (ns),    Memory time (ns),     Compute eff,      Memory eff,    Inputs
+                        Placeholder,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                        Placeholder,                   0,                   0,                   0,           -inf%,           -inf%,    []
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 224, 224, 3)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 1, 32)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(11, 11, 3, 64)]
-                             Conv2D,           195689000,           194281000,             1407000,             99%,           0.72%,    [(32, 224, 224, 3), (11, 11, 3, 64)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(32)]
+                             Conv2D,               55000,               52000,                3000,             95%,            5.5%,    [(-2, 28, 28, 1), (5, 5, 1, 32)]
+                            BiasAdd,                7000,                1000,                6000,             14%,             86%,    [(-2, 28, 28, 32), (32)]
+                               Relu,                7000,                1000,                6000,             14%,             86%,    [(-2, 28, 28, 32)]
+                            MaxPool,                4000,                   0,                3000,           -inf%,             75%,    [(-2, 28, 28, 32)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 32, 64)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
                            Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(64)]
-                            BiasAdd,             1873000,              267000,             1605000,             14%,             86%,    [(32, 56, 56, 64), (64)]
-                               Relu,             1873000,              267000,             1605000,             14%,             86%,    [(32, 56, 56, 64)]
-                                LRN,             1605000,                   0,             1605000,           -inf%,          1e+02%,    [(32, 56, 56, 64)]
-                            MaxPool,             1487000,              497000,              989000,             33%,             67%,    [(32, 56, 56, 64)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 64, 192)]
-                             Conv2D,           597981000,           597196000,              784000,          1e+02%,           0.13%,    [(32, 27, 27, 64), (5, 5, 64, 192)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(192)]
-                            BiasAdd,             1306000,              186000,             1119000,             14%,             86%,    [(32, 27, 27, 192), (192)]
-                               Relu,             1306000,              186000,             1119000,             14%,             86%,    [(32, 27, 27, 192)]
-                                LRN,             1119000,                   0,             1119000,           -inf%,          1e+02%,    [(32, 27, 27, 192)]
-                            MaxPool,             1035000,              346000,              689000,             33%,             67%,    [(32, 27, 27, 192)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 192, 384)]
-                             Conv2D,           299513000,           299040000,              472000,          1e+02%,           0.16%,    [(32, 13, 13, 192), (3, 3, 192, 384)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(384)]
-                            BiasAdd,              605000,               86000,              519000,             14%,             86%,    [(32, 13, 13, 384), (384)]
-                               Relu,              605000,               86000,              519000,             14%,             86%,    [(32, 13, 13, 384)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 384, 256)]
-                             Conv2D,           399264000,           398721000,              543000,          1e+02%,           0.14%,    [(32, 13, 13, 384), (3, 3, 384, 256)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(256)]
-                            BiasAdd,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256), (256)]
-                               Relu,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3, 3, 256, 256)]
-                             Conv2D,           266233000,           265814000,              419000,          1e+02%,           0.16%,    [(32, 13, 13, 256), (3, 3, 256, 256)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(256)]
-                            BiasAdd,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256), (256)]
-                               Relu,              403000,               57000,              346000,             14%,             86%,    [(32, 13, 13, 256)]
-                            MaxPool,              308000,               98000,              209000,             32%,             68%,    [(32, 13, 13, 256)]
+                             Conv2D,              845000,              836000,                8000,             99%,           0.95%,    [(-2, 14, 14, 32), (5, 5, 32, 64)]
+                            BiasAdd,                3000,                   0,                3000,           -inf%,          1e+02%,    [(-2, 14, 14, 64), (64)]
+                               Relu,                3000,                   0,                3000,           -inf%,          1e+02%,    [(-2, 14, 14, 64)]
+                            MaxPool,                2000,                   0,                1000,           -inf%,             50%,    [(-2, 14, 14, 64)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 6, 6, 256), (2)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 7, 7, 64), (2)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(9216, 4096)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3136, 512)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                             L2Loss,              200000,                   0,              200000,           -inf%,          1e+02%,    [(3136, 512)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096)]
-                             MatMul,           105435000,           100663000,             4771000,             95%,            4.5%,    [(32, 9216), (9216, 4096)]
-                                Add,               38000,                5000,               33000,             13%,             87%,    [(32, 4096), (4096)]
-                               Relu,               38000,                5000,               32000,             13%,             84%,    [(32, 4096)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(512)]
+                             MatMul,              334000,              133000,              201000,             40%,             60%,    [(-2, 3136), (3136, 512)]
+                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (512)]
+                               Relu,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                      RandomUniform,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
+                                Sub,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                              Floor,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                            RealDiv,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 512)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096, 4096)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096)]
-                             MatMul,            46869000,            44739000,             2129000,             95%,            4.5%,    [(32, 4096), (4096, 4096)]
-                                Add,               38000,                5000,               33000,             13%,             87%,    [(32, 4096), (4096)]
-                               Relu,               38000,                5000,               32000,             13%,             84%,    [(32, 4096)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(4096, 1000)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(1000)]
-                             MatMul,            11455000,            10922000,              532000,             95%,            4.6%,    [(32, 4096), (4096, 1000)]
-                                Add,                9000,                1000,                8000,             11%,             89%,    [(32, 1000), (1000)]
-                               Relu,                9000,                1000,                8000,             11%,             89%,    [(32, 1000)]
-                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(1000, 10)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(512, 10)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                             L2Loss,                   0,                   0,                   0,           -inf%,           -inf%,    [(512, 10)]
                          VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
                            Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(10)]
-                             MatMul,               31000,               26000,                5000,             84%,             16%,    [(32, 1000), (1000, 10)]
-                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (10)]
-                            Softmax,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10)]
+                             MatMul,                1000,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (512, 10)]
+                                Add,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), (10)]
+                         VariableV2,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                             ArgMax,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), ]
+SparseSoftmaxCrossEntropyWithLogits,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), (-2)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
                                Fill,                   0,                   0,                   0,           -inf%,           -inf%,    [(0), ]
-                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), ]
-                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (32, 10)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (1)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(1)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2)]
+                               Tile,                   0,                   0,                   0,           -inf%,           -inf%,    [(1), (1)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(32), (2)]
-                                Sub,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (32, 1)]
-                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (32, 10)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                               Prod,                   0,                   0,                   0,           -inf%,           -inf%,    [(1), (1)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                               Prod,                   0,                   0,                   0,           -inf%,           -inf%,    [(0), (1)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                            Maximum,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           FloorDiv,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                               Cast,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                            RealDiv,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2), ]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                    PreventGradient,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10)]
+                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                         ExpandDims,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2), ]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 1), (-2, 10)]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
               BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (1)]
-                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 10), (-8)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), (-10)]
                             Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
-                             MatMul,               31000,               26000,                5000,             84%,             16%,    [(32, 10), (1000, 10)]
-                           ReluGrad,               13000,                1000,               12000,            7.7%,             92%,    [(32, 1000), (32, 1000)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), (-11)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(1)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 10)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(10)]
+                                Mul,              468000,               66000,              401000,             14%,             86%,    [(3136, 512), ]
+                                Mul,                1000,                   0,                1000,           -inf%,          1e+02%,    [(512, 10), ]
+                             MatMul,                1000,                   0,                   0,           -inf%,           -inf%,    [(-2, 10), (512, 10)]
+                             MatMul,                1000,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 10)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(512, 10)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+              BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (2)]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 512)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-8)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 512)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-9)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                               AddN,                1000,                   0,                1000,           -inf%,          1e+02%,    [(512, 10), (512, 10)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+              BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (0)]
+                            RealDiv,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-6)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
+                                Neg,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                            RealDiv,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                            RealDiv,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), ]
+                                Mul,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 512)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-7)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(0)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                           ReluGrad,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-2, 512)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
               BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (1)]
-                                Sum,                4000,                   0,                4000,           -inf%,          1e+02%,    [(32, 1000), (-6)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-4)]
                             Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
-                             MatMul,            11455000,            10922000,              532000,             95%,            4.6%,    [(32, 1000), (4096, 1000)]
-                           ReluGrad,               54000,                5000,               49000,            9.3%,             91%,    [(32, 4096), (32, 4096)]
+                                Sum,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512), (-5)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(1)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 512)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(512)]
+                             MatMul,              334000,              133000,              201000,             40%,             60%,    [(-2, 512), (3136, 512)]
+                             MatMul,              334000,              133000,              201000,             40%,             60%,    [(-2, 3136), (-2, 512)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 3136)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(3136, 512)]
+                              Shape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 7, 7, 64)]
+                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 3136), (4)]
+                               AddN,              602000,                   0,              602000,           -inf%,          1e+02%,    [(3136, 512), (3136, 512)]
+                        MaxPoolGrad,                4000,                   0,                3000,           -inf%,             75%,    [(-2, 14, 14, 64), (-2, 7, 7, 64), (-2, 7, 7, 64)]
+                           ReluGrad,                5000,                   0,                4000,           -inf%,             80%,    [(-2, 14, 14, 64), (-2, 14, 14, 64)]
+                        BiasAddGrad,                1000,                   0,                1000,           -inf%,          1e+02%,    [(-2, 14, 14, 64)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 14, 14, 64)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(64)]
+                             ShapeN,                7000,                   0,                7000,           -inf%,          1e+02%,    [(-2, 14, 14, 32), (5, 5, 32, 64)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                Conv2DBackpropInput,              845000,              836000,                8000,             99%,           0.95%,    [(4), (5, 5, 32, 64), (-2, 14, 14, 64)]
+               Conv2DBackpropFilter,              845000,              836000,                8000,             99%,           0.95%,    [(-2, 14, 14, 32), (4), (-2, 14, 14, 64)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 14, 14, 32)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 32, 64)]
+                        MaxPoolGrad,                8000,                1000,                7000,             13%,             88%,    [(-2, 28, 28, 32), (-2, 14, 14, 32), (-2, 14, 14, 32)]
+                           ReluGrad,               10000,                1000,                9000,             10%,             90%,    [(-2, 28, 28, 32), (-2, 28, 28, 32)]
+                        BiasAddGrad,                3000,                   0,                3000,           -inf%,          1e+02%,    [(-2, 28, 28, 32)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 28, 28, 32)]
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(32)]
+                             ShapeN,                   0,                   0,                   0,           -inf%,           -inf%,    [(-2, 28, 28, 1), (5, 5, 1, 32)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-              BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (1)]
-                                Sum,               16000,                   0,               16000,           -inf%,          1e+02%,    [(32, 4096), (-4)]
-                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
-                             MatMul,            46869000,            44739000,             2129000,             95%,            4.5%,    [(32, 4096), (4096, 4096)]
-                           ReluGrad,               54000,                5000,               49000,            9.3%,             91%,    [(32, 4096), (32, 4096)]
+                Conv2DBackpropInput,               55000,               52000,                3000,             95%,            5.5%,    [(4), (5, 5, 1, 32), (-2, 28, 28, 32)]
+               Conv2DBackpropFilter,               55000,               52000,                3000,             95%,            5.5%,    [(-2, 28, 28, 1), (4), (-2, 28, 28, 32)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
+                           Identity,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 1, 32)]
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
+               ApplyGradientDescent,                   0,                   0,                   0,           -inf%,           -inf%,    [(5, 5, 1, 32), (5, 5, 1, 32)]
+               ApplyGradientDescent,                   0,                   0,                   0,           -inf%,           -inf%,    [(32), (32)]
+               ApplyGradientDescent,               19000,                   0,               19000,           -inf%,          1e+02%,    [(5, 5, 32, 64), (5, 5, 32, 64)]
+               ApplyGradientDescent,                   0,                   0,                   0,           -inf%,           -inf%,    [(64), (64)]
+               ApplyGradientDescent,              602000,                   0,              602000,           -inf%,          1e+02%,    [(3136, 512), (3136, 512)]
+               ApplyGradientDescent,                   0,                   0,                   0,           -inf%,           -inf%,    [(512), (512)]
+               ApplyGradientDescent,                1000,                   0,                1000,           -inf%,          1e+02%,    [(512, 10), (512, 10)]
+               ApplyGradientDescent,                   0,                   0,                   0,           -inf%,           -inf%,    [(10), (10)]
+                               NoOp,                   0,                   0,                   0,           -inf%,           -inf%,    []
                               Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-              BroadcastGradientArgs,                   0,                   0,                   0,           -inf%,           -inf%,    [(2), (1)]
-                                Sum,               16000,                   0,               16000,           -inf%,          1e+02%,    [(32, 4096), (-2)]
-                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(2)]
-                             MatMul,           105435000,           100663000,             4771000,             95%,            4.5%,    [(32, 4096), (9216, 4096)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                            Reshape,                   0,                   0,                   0,           -inf%,           -inf%,    [(32, 9216), (4)]
-                        MaxPoolGrad,              596000,              213000,              382000,             36%,             64%,    [(32, 13, 13, 256), (32, 6, 6, 256), (32, 6, 6, 256)]
-                           ReluGrad,              576000,               57000,              519000,            9.9%,             90%,    [(32, 13, 13, 256), (32, 13, 13, 256)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                Conv2DBackpropInput,           266233000,           265814000,              419000,          1e+02%,           0.16%,    [(4), (3, 3, 256, 256), (32, 13, 13, 256)]
-               Conv2DBackpropFilter,           266233000,           265814000,              419000,          1e+02%,           0.16%,    [(32, 13, 13, 256), (4), (32, 13, 13, 256)]
-                           ReluGrad,              576000,               57000,              519000,            9.9%,             90%,    [(32, 13, 13, 256), (32, 13, 13, 256)]
-                        BiasAddGrad,              173000,                   0,              173000,           -inf%,          1e+02%,    [(32, 13, 13, 256)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                Conv2DBackpropInput,           399264000,           398721000,              543000,          1e+02%,           0.14%,    [(4), (3, 3, 384, 256), (32, 13, 13, 256)]
-               Conv2DBackpropFilter,           399264000,           398721000,              543000,          1e+02%,           0.14%,    [(32, 13, 13, 384), (4), (32, 13, 13, 256)]
-                           ReluGrad,              865000,               86000,              778000,            9.9%,             90%,    [(32, 13, 13, 384), (32, 13, 13, 384)]
-                        BiasAddGrad,              259000,                   0,              259000,           -inf%,          1e+02%,    [(32, 13, 13, 384)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                Conv2DBackpropInput,           299513000,           299040000,              472000,          1e+02%,           0.16%,    [(4), (3, 3, 192, 384), (32, 13, 13, 384)]
-               Conv2DBackpropFilter,           299513000,           299040000,              472000,          1e+02%,           0.16%,    [(32, 13, 13, 192), (4), (32, 13, 13, 384)]
-                        MaxPoolGrad,             1968000,              719000,             1249000,             37%,             63%,    [(32, 27, 27, 192), (32, 13, 13, 192), (32, 13, 13, 192)]
-                            LRNGrad,             2239000,                   0,             2239000,           -inf%,          1e+02%,    [(32, 27, 27, 192), (32, 27, 27, 192), (32, 27, 27, 192)]
-                           ReluGrad,             1866000,              186000,             1679000,             10%,             90%,    [(32, 27, 27, 192), (32, 27, 27, 192)]
-                        BiasAddGrad,              559000,                   0,              559000,           -inf%,          1e+02%,    [(32, 27, 27, 192)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-                Conv2DBackpropInput,           597981000,           597196000,              784000,          1e+02%,           0.13%,    [(4), (5, 5, 64, 192), (32, 27, 27, 192)]
-               Conv2DBackpropFilter,           597981000,           597196000,              784000,          1e+02%,           0.13%,    [(32, 27, 27, 64), (4), (32, 27, 27, 192)]
-                        MaxPoolGrad,             2825000,             1032000,             1792000,             37%,             63%,    [(32, 56, 56, 64), (32, 27, 27, 64), (32, 27, 27, 64)]
-                            LRNGrad,             3211000,                   0,             3211000,           -inf%,          1e+02%,    [(32, 56, 56, 64), (32, 56, 56, 64), (32, 56, 56, 64)]
-                           ReluGrad,             2676000,              267000,             2408000,             10%,             90%,    [(32, 56, 56, 64), (32, 56, 56, 64)]
-                        BiasAddGrad,              802000,                   0,              802000,           -inf%,          1e+02%,    [(32, 56, 56, 64)]
-                              Const,                   0,                   0,                   0,           -inf%,           -inf%,    []
-               Conv2DBackpropFilter,           195689000,           194281000,             1407000,             99%,           0.72%,    [(32, 224, 224, 3), (4), (32, 56, 56, 64)]
+                          AssignAdd,                   0,                   0,                   0,           -inf%,           -inf%,    []
 
