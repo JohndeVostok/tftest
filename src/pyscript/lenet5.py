@@ -26,7 +26,7 @@ MODEL_PATH = 'model'
 MODEL_NAME = 'model'
 
 
-def interence(input_tensor, train, regularizer):
+def inference(input_tensor, train, regularizer):
     with tf.variable_scope('layer1-conv'):
         w = tf.get_variable('w', [CONV1_SIZE, CONV1_SIZE, NUM_CHANNEL, CONV1_DEEP],
                             initializer=tf.truncated_normal_initializer(stddev=0.1))
