@@ -1,0 +1,14 @@
+random_normal/mul
+random_normal_1/RandomStandardNormal
+random_normal_1
+random_normal/RandomStandardNormal
+random_normal/stddev
+MatMul_1
+random_normal/mean
+random_normal_1/mean
+random_normal
+random_normal_1/mul
+MatMul
+random_normal_1/stddev
+random_normal_1/shape
+random_normal/shape

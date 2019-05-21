@@ -2,10 +2,10 @@ import os
 import json
 from ast import literal_eval
 
-test = "lenet5"
+test = "matmul"
 
 if __name__ == "__main__":
-    os.chdir("d:/git/tftest")
+#    os.chdir("d:/git/tftest")
     nodetime = {}
     with open(test + "_timeline.json", "r") as f:
         data = f.read()
@@ -42,7 +42,6 @@ if __name__ == "__main__":
             f.write(str(node) + "\n")
 
     q = []
-    print(nodes["gradients/layer3-conv/BiasAdd_grad/tuple/group_deps"])
     for i in nodes:
         nodes[i]["t"] = 0
         if nodes[i]["in"] == []:
@@ -56,8 +55,6 @@ if __name__ == "__main__":
             res.append(str(nodes[i]["t"]))
             nodes[i]["t"] = nodes[i]["t"] + nodetime[i]
             res.append(str(nodes[i]["t"]))
-        if i == "gradients/layer3-conv/BiasAdd_grad/BiasAddGrad":
-            print(nodes[i])
         for j in nodes[i]["out"]:
             if nodes[i]["t"] > nodes[j]["t"]:
                 nodes[j]["t"] = nodes[i]["t"]

@@ -1,0 +1,15 @@
+random_normal_1/shape
+0
+18
+random_normal_1/RandomStandardNormal
+18
+420191
+random_normal/RandomStandardNormal
+0
+47
+MatMul
+420191
+420283
+MatMul_1
+420283
+420309

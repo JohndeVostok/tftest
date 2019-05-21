@@ -7,8 +7,10 @@ if __name__ == "__main__":
 #    os.environ["CUDA_VISIBLE_DEVICES"]="-1"
     a = tf.random_normal([5000, 5000])
     b = tf.random_normal([5000, 5000])
-    c = tf.matmul(a, b)
-    d = tf.matmul(b, c)
+    c = tf.random_normal([5000, 5000])
+    d = tf.matmul(a, b)
+    e = tf.matmul(b, c)
+    f = tf.matmul(d, e)
 
     sess = tf.Session()
 
@@ -17,17 +19,17 @@ if __name__ == "__main__":
 
     writer=tf.summary.FileWriter("logs", sess.graph)
 
-    sess.run(d, options=run_options, run_metadata=run_metadata)
+    sess.run(f, options=run_options, run_metadata=run_metadata)
     writer.add_run_metadata(run_metadata, 'step %03d' % 0)
 
     writer.close()
 
     tl = timeline.Timeline(run_metadata.step_stats)
     ctf = tl.generate_chrome_trace_format()
-    with open('matmul_timeline.json', 'w') as f:
+    with open('matmul1_timeline.json', 'w') as f:
         f.write(ctf)
 
-    with open('matmul_graph.json', "w") as f:
+    with open('matmul1_graph.json', "w") as f:
         nodes = []
         for n in tf.get_default_graph().as_graph_def().node:
             nodes.append("{\"name\":\"" + str(n.name) + "\",\"input\":\"" + str(n.input) + "\"}")

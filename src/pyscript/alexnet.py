@@ -16,8 +16,7 @@ def inference(images):
     parameters = []
 
     with tf.name_scope("conv1") as scope:
-        kernel1 = tf.Variable(tf.truncated_normal([11, 11, 3, 64], mean=0, stddev=0.1,
-                                                  dtype=tf.float32), name="weights")
+        kernel1 = tf.Variable(tf.truncated_normal([11, 11, 3, 64], mean=0, stddev=0.1, dtype=tf.float32), name="weights")
         conv = tf.nn.conv2d(images, kernel1, [1, 4, 4, 1], padding="SAME")
         biases = tf.Variable(tf.constant(0, shape=[64], dtype=tf.float32), trainable=True, name="biases")
         bias = tf.nn.bias_add(conv, biases)
@@ -97,7 +96,7 @@ def inference(images):
 
 
 if __name__ == "__main__":
-    os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+#    os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
     image_size = 224
     images = tf.Variable(tf.random_normal([batch_size, image_size, image_size, 3]))
