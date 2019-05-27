@@ -4,11 +4,12 @@ import tensorflow as tf
 from tensorflow.python.client import timeline
 
 if __name__ == "__main__":
-#    os.environ["CUDA_VISIBLE_DEVICES"]="-1"
-    a = tf.random_normal([5000, 5000])
-    b = tf.random_normal([5000, 5000])
-    c = tf.matmul(a, b)
-    d = tf.matmul(b, c)
+    os.environ["CUDA_VISIBLE_DEVICES"]="-1"
+    os.chdir("/home/mazx/git/tftest")
+    a = tf.random_normal([5000, 5000], name = "random_normal_0")
+    b = tf.random_normal([5000, 5000], name = "random_normal_1")
+    c = tf.matmul(a, b, name = "matmul_0")
+    d = tf.matmul(b, c, name = "matmul_1")
 
     sess = tf.Session()
 

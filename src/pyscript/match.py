@@ -5,7 +5,7 @@ from ast import literal_eval
 test = "matmul"
 
 if __name__ == "__main__":
-#    os.chdir("d:/git/tftest")
+    os.chdir("/home/mazx/git/tftest")
     nodetime = {}
     with open(test + "_timeline.json", "r") as f:
         data = f.read()

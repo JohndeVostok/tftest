@@ -1,9 +1,7 @@
 import os
 import json
-import math
 import numpy as np
 from config import *
-from sklearn.linear_model import LinearRegression
 
 if __name__ == "__main__":
     os.chdir(WORKPATH)
@@ -47,13 +45,11 @@ if __name__ == "__main__":
                 midd[i][k][j] = mid
 
     
-    x = []
-    y = []
+    res = []
     for i in range(MATRANGE):
         for k in range(MATRANGE):
             for j in range(MATRANGE):
-                x.append([i, k, j])
-                y.append([math.log(mean[i][k][j], 2)])
-    model = LinearRegression()
-    model.fit(x, y)
-    print(2 ** model.predict([[0, 0, 0]]))
+                res.append(str(i) + " " + str(k) + " " + str(j) + " " + str(mean[i, k, j]) + "\n")
+    with open(MATMULCPURES, "w") as f:
+        f.writelines(res)
+
